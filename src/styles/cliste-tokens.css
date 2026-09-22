@@ -1,0 +1,64 @@
+/* ==========================================================================
+   CLISTE DESIGN SYSTEM TOKENS
+   Deep Obsidian, Aurora Shimmer, Frosted Glass, Typography & Motion
+   ========================================================================== */
+
+:root {
+  /* Color Palette - Core */
+  --bg-space: #09090b;
+  --bg-surface: #0f131a;
+  --bg-card: rgba(255, 255, 255, 0.04);
+  --bg-card-hover: rgba(255, 255, 255, 0.08);
+  --bg-glass: rgba(255, 255, 255, 0.08);
+  --bg-glass-strong: rgba(255, 255, 255, 0.14);
+  --border-glass: rgba(255, 255, 255, 0.15);
+  --border-glass-subtle: rgba(255, 255, 255, 0.08);
+  --border-glass-hover: rgba(255, 255, 255, 0.28);
+
+  /* Contrast / Light Section */
+  --bg-light: #f8fafc;
+  --bg-light-card: #ffffff;
+  --text-light-heading: #0f172a;
+  --text-light-body: #475569;
+  --border-light: #e2e8f0;
+
+  /* Typography Colors */
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.72);
+  --text-muted: rgba(255, 255, 255, 0.45);
+  --text-accent: #38bdf8;
+
+  /* State / Accent Accents */
+  --accent-green: #10b981;
+  --accent-green-bg: rgba(16, 185, 129, 0.12);
+  --accent-green-border: rgba(16, 185, 129, 0.28);
+  --accent-red: #f87171;
+  --accent-red-bg: rgba(248, 113, 113, 0.12);
+  --accent-red-border: rgba(248, 113, 113, 0.28);
+  --accent-blue: #3b82f6;
+  --accent-cyan: #06b6d4;
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Elevation & Shadows */
+  --shadow-glass: 0 20px 50px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 40px rgba(56, 189, 248, 0.2);
+  --shadow-btn: 0 10px 25px -5px rgba(255, 255, 255, 0.25);
+
+  /* Radius */
+  --radius-full: 9999px;
+  --radius-2xl: 1.5rem;
+  --radius-xl: 1rem;
+  --radius-lg: 0.75rem;
+  --radius-md: 0.5rem;
+
+  /* Transitions */
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 150ms var(--ease-smooth);
+  --transition-base: 300ms var(--ease-smooth);
+  --transition-slow: 600ms var(--ease-spring);
+}

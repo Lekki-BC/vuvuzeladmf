@@ -1637,52 +1637,6 @@ input, select {
   color: var(--text-muted);
 }
 
-/* ==========================================================================
-   CAR DEALERSHIP PAGE SPECIFIC STYLES
-   ========================================================================== */
-.dealership-counter-badge {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 800;
-  background: linear-gradient(90deg, #f87171, #fb923c);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-  margin: 0.5rem 0;
-}
-
-.dealership-video-card {
-  max-width: 800px;
-  margin: 2.5rem auto;
-  aspect-ratio: 16 / 9;
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--border-glass);
-  border-radius: var(--radius-2xl);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  box-shadow: var(--shadow-glass);
-}
-
-.play-video-circle {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background: #ffffff;
-  color: #09090b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  transition: transform var(--transition-fast);
-}
-
-.dealership-video-card:hover .play-video-circle {
-  transform: scale(1.1);
-}
-
 .split-screen-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2212,9 +2166,6 @@ input, select {
   .footer-nav-grid {
     grid-template-columns: 1fr;
     gap: 1.25rem;
-  }
-  .dealership-counter-badge {
-    font-size: 2.2rem;
   }
   .kpi-row-card {
     padding: 0.75rem 0.75rem;

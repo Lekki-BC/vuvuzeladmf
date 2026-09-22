@@ -8,7 +8,7 @@ export function renderHeroSection() {
         <!-- Status Pill Badge -->
         <div class="pill-badge">
           <span class="pulse-dot"></span>
-          <span>AI Automation & Performance Growth Engine</span>
+          <span>Digital Marketing Agency & Performance Growth Engine</span>
         </div>
 
         <!-- Main Headline with Rotating Word Badge -->
@@ -17,29 +17,30 @@ export function renderHeroSection() {
           <br />
           <div class="hero-headline-subrow">
             <span>Business</span>
-            <span class="rotating-word-pill" id="rotatingWordPill">Growth</span>
+            <span class="rotating-word-pill" id="rotatingWordPill">Revenue</span>
           </div>
         </h1>
 
         <!-- Subheading -->
         <p class="hero-lead">
-          Vuvuzela DMF helps ambitious businesses save time, capture lost leads, and multiply revenue with smart conversational AI, automated workflows, and precision performance engineering—fully managed for you.
+          Vuvuzela DMF is an elite digital marketing agency engineering predictable revenue pipelines for ambitious brands. We combine high-converting web design, precision paid acquisition (Meta & Google), technical SEO, and 24/7 smart lead automation—fully managed for you.
         </p>
 
         <!-- CTA Buttons -->
         <div class="hero-actions">
           <button type="button" class="btn-pill-primary trigger-brief-modal">
-            <span>Start Automating</span>
+            <span>Claim Free Growth Audit</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
           </button>
 
-          <a href="#ai-team" class="btn-pill-secondary">
+          <a href="#services" class="btn-pill-secondary">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polygon points="5 3 19 12 5 21 5 3"/>
+              <circle cx="12" cy="12" r="10"/>
+              <polygon points="10 8 16 12 10 16 10 8"/>
             </svg>
-            <span>Live Demonstration</span>
+            <span>Explore Services</span>
           </a>
         </div>
 
@@ -47,7 +48,7 @@ export function renderHeroSection() {
         <div class="trust-marquee-wrapper">
           <div class="trust-marquee-fade-left"></div>
           <div class="trust-marquee-fade-right"></div>
-          <p class="trust-marquee-label">Trusted by high-growth companies & ambitious brands</p>
+          <p class="trust-marquee-label">Trusted by high-growth companies, ambitious brands & industry leaders</p>
           <div class="trust-marquee-track">
             <!-- First Set -->
             <div class="trust-marquee-item">TechCorp</div>
@@ -78,7 +79,7 @@ export function initHeroSection() {
   const rotatingPill = document.getElementById('rotatingWordPill');
   if (!rotatingPill) return;
 
-  const words = ['Growth', 'Innovation', 'Efficiency', 'Pipeline', 'Revenue', 'Performance'];
+  const words = ['Revenue', 'ROAS', 'Pipeline', 'Acquisition', 'Conversion', 'Growth'];
   let index = 0;
 
   setInterval(() => {

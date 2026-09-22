@@ -1,6 +1,6 @@
 /**
  * Router - Client-side SPA router with smooth page transitions
- * Manages route changes between '/' and '/car-dealerships', anchor scroll offsets, and browser history
+ * Handles anchor scroll offsets and clean digital marketing agency views
  */
 
 import { renderGlassmorphismNav, initGlassmorphismNav } from './GlassmorphismNav.js';
@@ -12,7 +12,6 @@ import { renderTestimonialsSection } from './TestimonialsSection.js';
 import { renderROICalculatorSection, initROICalculatorSection } from './ROICalculatorSection.js';
 import { renderCTASection } from './CTASection.js';
 import { renderFooterSection } from './FooterSection.js';
-import { renderDealershipPage, initDealershipPage } from './DealershipPage.js';
 
 export class AppRouter {
   constructor(rootContainerId = 'appRoot') {
@@ -22,12 +21,6 @@ export class AppRouter {
   }
 
   normalizePath(path) {
-    if (!path || path === '/' || path.endsWith('/index.html')) {
-      return '/';
-    }
-    if (path.includes('car-dealerships')) {
-      return '/car-dealerships';
-    }
     return '/';
   }
 
@@ -69,14 +62,11 @@ export class AppRouter {
 
     // Listen for browser Back/Forward navigation
     window.addEventListener('popstate', () => {
-      const newPath = this.normalizePath(window.location.pathname);
-      if (newPath !== this.currentPath) {
-        this.renderRoute(newPath, false);
-      }
+      this.renderRoute('/', false);
     });
 
     // Initial render
-    this.renderRoute(this.currentPath, false);
+    this.renderRoute('/', false);
 
     // If initial URL has a hash, scroll to it after rendering
     if (window.location.hash) {
@@ -96,8 +86,8 @@ export class AppRouter {
     }
 
     setTimeout(() => {
-      window.history.pushState({}, '', newPath === '/' ? '/' : newPath);
-      this.renderRoute(newPath, true);
+      window.history.pushState({}, '', '/');
+      this.renderRoute('/', true);
 
       // Scroll to top
       window.scrollTo(0, 0);
@@ -113,47 +103,32 @@ export class AppRouter {
   }
 
   renderRoute(path, isNav) {
-    this.currentPath = this.normalizePath(path);
-
     if (!this.rootContainer) return;
 
     let pageHtml = '';
 
     // Render Navigation
-    pageHtml += renderGlassmorphismNav(this.currentPath);
+    pageHtml += renderGlassmorphismNav('/');
 
-    if (this.currentPath === '/car-dealerships') {
-      // Render Car Dealerships Page
-      document.title = 'Car Dealership AI Engine — Clutch 1.0 | Vuvuzela DMF';
-      pageHtml += renderDealershipPage();
-      pageHtml += renderCTASection();
-      pageHtml += renderFooterSection();
-    } else {
-      // Render Home Page
-      document.title = 'VUVUZELA DMF — AI Automation & Performance Growth Engine';
-      pageHtml += renderHeroSection();
-      pageHtml += renderProblemSolutionSection();
-      pageHtml += renderFeaturesSection();
-      pageHtml += renderAITeamSection();
-      pageHtml += renderTestimonialsSection();
-      pageHtml += renderROICalculatorSection();
-      pageHtml += renderCTASection();
-      pageHtml += renderFooterSection();
-    }
+    // Render Digital Marketing Agency Page
+    document.title = 'VUVUZELA DMF — Digital Marketing Agency & Performance Growth Engine';
+    pageHtml += renderHeroSection();
+    pageHtml += renderProblemSolutionSection();
+    pageHtml += renderFeaturesSection();
+    pageHtml += renderAITeamSection();
+    pageHtml += renderTestimonialsSection();
+    pageHtml += renderROICalculatorSection();
+    pageHtml += renderCTASection();
+    pageHtml += renderFooterSection();
 
     this.rootContainer.innerHTML = pageHtml;
 
     // Initialize components for the active view
     initGlassmorphismNav();
-
-    if (this.currentPath === '/car-dealerships') {
-      initDealershipPage();
-    } else {
-      initHeroSection();
-      initFeaturesSection();
-      initAITeamSection();
-      initROICalculatorSection();
-    }
+    initHeroSection();
+    initFeaturesSection();
+    initAITeamSection();
+    initROICalculatorSection();
   }
 
   scrollToAnchor(hash) {

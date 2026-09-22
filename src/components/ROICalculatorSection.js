@@ -11,13 +11,13 @@ export function renderROICalculatorSection() {
         <div class="section-header-center">
           <div class="pill-badge">
             <span class="pulse-dot dot-green"></span>
-            <span>ROI Estimation Engine</span>
+            <span>Performance ROI Diagnostic</span>
           </div>
           <h2 class="section-title">
-            Calculate Your Revenue Growth Potential
+            Calculate Your Marketing Revenue Potential
           </h2>
           <p class="section-subtitle">
-            Adjust your monthly traffic, current conversion baseline, and customer deal size to see how much pipeline Vuvuzela DMF unlocks for you.
+            Adjust your monthly traffic, current conversion baseline, and average customer order value to see how Vuvuzela DMF's full-funnel marketing multiplies your pipeline.
           </p>
         </div>
 
@@ -31,12 +31,11 @@ export function renderROICalculatorSection() {
                 <span>Select Your Business Model</span>
               </label>
               <select class="calc-type-select" id="businessSectorSelect">
-                <option value="automotive">Car Dealerships / Automotive (€25,000 avg deal)</option>
-                <option value="ecommerce" selected>E-Commerce & Retail (€85 avg order)</option>
-                <option value="clinics">Private Clinics & Health (€250 avg patient)</option>
-                <option value="salons">Salons, Barbers & Spas (€65 avg ticket)</option>
-                <option value="realestate">Real Estate & Property (€5,000 avg fee)</option>
+                <option value="ecommerce" selected>E-Commerce & DTC Brands (€85 avg order)</option>
                 <option value="b2b">B2B & Professional Services (€1,500 avg retainer)</option>
+                <option value="clinics">Private Clinics & Health (€250 avg patient)</option>
+                <option value="realestate">Real Estate & Property (€3,500 avg deal)</option>
+                <option value="saas">SaaS & Technology Subscriptions (€150 avg MRR)</option>
               </select>
             </div>
 
@@ -156,11 +155,10 @@ export function initROICalculatorSection() {
 
   const sectorPresets = {
     ecommerce: { order: 85, min: 25, max: 1000 },
-    automotive: { order: 1200, min: 200, max: 5000 },
-    clinics: { order: 250, min: 50, max: 2000 },
-    salons: { order: 65, min: 25, max: 300 },
-    realestate: { order: 3500, min: 500, max: 10000 },
     b2b: { order: 1500, min: 300, max: 5000 },
+    clinics: { order: 250, min: 50, max: 2000 },
+    realestate: { order: 3500, min: 500, max: 10000 },
+    saas: { order: 150, min: 30, max: 2500 },
   };
 
   function recalculate() {

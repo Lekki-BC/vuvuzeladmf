@@ -9,14 +9,14 @@ export function renderBriefModal() {
         
         <div class="pill-badge" style="margin-bottom: 1rem;">
           <span class="pulse-dot dot-green"></span>
-          <span>Zero-Commitment Diagnostic</span>
+          <span>Zero-Obligation Growth Diagnostic</span>
         </div>
 
         <h3 id="modalTitle" style="font-size: 1.65rem; font-weight: 800; color: #ffffff; line-height: 1.25;">
-          Get Your Free Response-Time & AI Audit
+          Claim Your Free Digital Marketing &amp; Growth Audit
         </h3>
         <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">
-          We will test your current lead response speed, analyze missed buyer inquiries, and demonstrate a live working AI agent for your business.
+          Our senior growth team will analyze your paid ad campaigns, evaluate your website conversion funnel, identify ad spend leakage, and deliver a tailored 90-day scaling roadmap.
         </p>
 
         <form class="modal-form" id="briefModalForm">
@@ -27,28 +27,39 @@ export function renderBriefModal() {
 
           <div class="form-group">
             <label for="inputWorkEmail">Work Email</label>
-            <input type="email" id="inputWorkEmail" class="form-input" placeholder="michael@dealership.com" required />
+            <input type="email" id="inputWorkEmail" class="form-input" placeholder="michael@company.com" required />
           </div>
 
           <div class="form-group">
-            <label for="inputWebsite">Business Website / Company Name</label>
-            <input type="text" id="inputWebsite" class="form-input" placeholder="https://yourbusiness.com" required />
+            <label for="inputWebsite">Business Website or Brand URL</label>
+            <input type="text" id="inputWebsite" class="form-input" placeholder="https://yourbrand.com" required />
           </div>
 
           <div class="form-group">
             <label for="inputSector">Primary Industry</label>
             <select id="inputSector" class="calc-type-select" style="background: rgba(255,255,255,0.06); width: 100%;">
-              <option value="automotive">Car Dealership / Automotive</option>
-              <option value="ecommerce">E-Commerce & Retail</option>
-              <option value="clinics">Private Clinic / Healthcare</option>
-              <option value="salons">Barbershop & Salon</option>
-              <option value="realestate">Real Estate</option>
-              <option value="other">Other High-Ticket Business</option>
+              <option value="ecommerce" selected>E-Commerce & DTC Brand</option>
+              <option value="b2b">B2B & Professional Services</option>
+              <option value="clinics">Private Healthcare & Clinic</option>
+              <option value="realestate">Real Estate & Property</option>
+              <option value="saas">SaaS & Technology</option>
+              <option value="other">Other Growth Business</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="inputGrowthGoal">Primary Growth Objective</label>
+            <select id="inputGrowthGoal" class="calc-type-select" style="background: rgba(255,255,255,0.06); width: 100%;">
+              <option value="paid-media">Scale Paid Ads & Maximize ROAS (Meta & Google)</option>
+              <option value="web-cro">Rebuild High-Converting Website & Sales Funnel</option>
+              <option value="seo">Dominate Google Search (Technical & Local SEO)</option>
+              <option value="automation">Automate 24/7 WhatsApp & Lead Qualification</option>
+              <option value="full-funnel" selected>Full-Funnel Digital Marketing Transformation</option>
             </select>
           </div>
 
           <button type="submit" class="btn-pill-primary" style="width: 100%; justify-content: center; margin-top: 0.5rem; padding: 0.9rem;">
-            <span>Schedule Live Diagnostic</span>
+            <span>Schedule Free Growth Audit</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>

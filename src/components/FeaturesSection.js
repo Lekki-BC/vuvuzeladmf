@@ -11,7 +11,6 @@ export function renderFeaturesSection() {
         <!-- Section Header -->
         <div class="section-header-center">
           <div class="pill-badge">
-            <span class="pulse-dot dot-green"></span>
             <span>What We Deliver</span>
           </div>
           <h2 class="section-title">
@@ -68,7 +67,6 @@ export function renderFeaturesSection() {
           <div class="feature-tile">
             <div class="feature-tile-preview" id="featureChatPreview">
               <div style="position: absolute; top: 10px; right: 12px; display: flex; align-items: center; gap: 4px;">
-                <span class="pulse-dot dot-green" style="width: 6px; height: 6px;"></span>
                 <span style="font-size: 0.72rem; color: #10b981; font-weight: 700;">&lt; 60s RESPONSE</span>
               </div>
               <div class="chat-sim-bubble chat-sim-bot" id="chatSimBubbleBot">

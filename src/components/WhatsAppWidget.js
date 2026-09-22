@@ -5,7 +5,7 @@
 export function renderWhatsAppWidget() {
   return `
     <div class="whatsapp-float-widget" id="whatsappFloatWidget">
-      <a href="https://wa.me/?text=Hello%20Vuvuzela%20DMF%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20services"
+      <a href="https://wa.me/2347011961582?text=Hello%20Vuvuzela%20DMF%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20digital%20marketing%20services"
          target="_blank"
          rel="noopener noreferrer"
          class="whatsapp-float-link"

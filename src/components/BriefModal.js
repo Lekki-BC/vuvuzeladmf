@@ -8,7 +8,6 @@ export function renderBriefModal() {
         <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">×</button>
         
         <div class="pill-badge" style="margin-bottom: 1rem;">
-          <span class="pulse-dot dot-green"></span>
           <span>Zero-Obligation Growth Diagnostic</span>
         </div>
 

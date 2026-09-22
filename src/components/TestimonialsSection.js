@@ -75,7 +75,7 @@ export function renderTestimonialsSection() {
         <!-- Section Header -->
         <div class="section-header-center">
           <div class="pill-badge">
-            <span class="pulse-dot"></span>
+            
             <span>Client Case Studies & ROAS Proof</span>
           </div>
           <h2 class="section-title">

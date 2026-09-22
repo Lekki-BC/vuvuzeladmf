@@ -105,7 +105,7 @@ export function renderAITeamSection() {
         <!-- Section Header -->
         <div class="section-header-center">
           <div class="pill-badge">
-            <span class="pulse-dot dot-green"></span>
+            
             <span>Specialized Growth Playbooks</span>
           </div>
           <h2 class="section-title" id="indSectionTitle">
@@ -164,7 +164,6 @@ export function renderAITeamSection() {
                 <div>
                   <div class="agent-name" id="chatAgentName">${data.agentName}</div>
                   <div class="agent-status-label">
-                    <span class="pulse-dot dot-green" style="width: 5px; height: 5px;"></span>
                     <span id="chatAgentPhone">${data.agentPhone}</span>
                   </div>
                 </div>
@@ -175,25 +174,25 @@ export function renderAITeamSection() {
             <!-- Messages Window -->
             <div class="chat-messages-scroll" id="chatMessagesScroll">
               ${data.initialMessages
-                .map(
-                  (m) => `
+      .map(
+        (m) => `
                 <div class="chat-msg ${m.sender === 'customer' ? 'customer-msg' : 'ai-msg'}">
                   ${m.text}
                 </div>
               `
-                )
-                .join('')}
+      )
+      .join('')}
             </div>
 
             <!-- Quick Action Prompts Bar -->
             <div class="chat-prompts-bar" id="chatPromptsBar">
               ${data.prompts
-                .map(
-                  (p) => `
+      .map(
+        (p) => `
                 <button type="button" class="chat-prompt-pill" data-prompt="${p}">${p}</button>
               `
-                )
-                .join('')}
+      )
+      .join('')}
             </div>
 
             <!-- Chat Input Bar -->

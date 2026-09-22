@@ -10,7 +10,6 @@ export function renderROICalculatorSection() {
         <!-- Header -->
         <div class="section-header-center">
           <div class="pill-badge">
-            <span class="pulse-dot dot-green"></span>
             <span>Performance ROI Diagnostic</span>
           </div>
           <h2 class="section-title">

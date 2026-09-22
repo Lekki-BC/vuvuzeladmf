@@ -5,12 +5,6 @@ export function renderHeroSection() {
   return `
     <section class="hero-section" id="hero">
       <div class="hero-inner">
-        <!-- Status Pill Badge -->
-        <div class="pill-badge">
-          <span class="pulse-dot"></span>
-          <span>Digital Marketing Agency & Performance Growth Engine</span>
-        </div>
-
         <!-- Main Headline with Rotating Word Badge -->
         <h1 class="hero-headline">
           <span>Elevate your</span>
@@ -92,7 +86,7 @@ export function initHeroSection() {
       rotatingPill.textContent = words[index];
       // Reset position below and animate in
       rotatingPill.style.transform = 'translateY(12px) scale(0.95)';
-      
+
       requestAnimationFrame(() => {
         rotatingPill.style.opacity = '1';
         rotatingPill.style.transform = 'translateY(0) scale(1)';

@@ -40,7 +40,7 @@ export function renderFooterSection() {
           <div class="footer-nav-col">
             <h4>Industries</h4>
             <ul class="footer-nav-links">
-              <li><a href="/car-dealerships" data-route="/car-dealerships">Car Dealerships</a></li>
+              <li><a href="#industries">Luxury Real Estate</a></li>
               <li><a href="#industries">E-Commerce & DTC</a></li>
               <li><a href="#industries">Private Clinics & Health</a></li>
               <li><a href="#industries">B2B & Professional</a></li>
@@ -56,7 +56,7 @@ export function renderFooterSection() {
               <li><a href="#problem-solution">The Growth Engine</a></li>
               <li><a href="#roi-calculator">Marketing ROI Calculator</a></li>
               <li><a href="#" class="trigger-brief-modal">Claim Free Growth Audit</a></li>
-              <li><a href="https://wa.me/?text=Hello%20Vuvuzela%20DMF%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20digital%20marketing%20services" target="_blank" rel="noopener">WhatsApp Direct Line</a></li>
+              <li><a href="#services">Our Capabilities</a></li>
             </ul>
           </div>
 
@@ -64,7 +64,6 @@ export function renderFooterSection() {
           <div class="footer-nav-col">
             <h4>Connect</h4>
             <ul class="footer-nav-links">
-              <li><a href="https://wa.me/?text=Hello%20Vuvuzela%20DMF" target="_blank" rel="noopener">WhatsApp Support</a></li>
               <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
               <li><a href="https://twitter.com" target="_blank" rel="noopener">X (Twitter)</a></li>
               <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>

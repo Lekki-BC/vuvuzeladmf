@@ -9,7 +9,6 @@ export function renderProblemSolutionSection() {
         <!-- Section Header -->
         <div class="section-header-center">
           <div class="pill-badge">
-            <span class="pulse-dot dot-red"></span>
             <span>The Marketing Reality Check</span>
           </div>
           <h2 class="section-title">

@@ -1,9 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('vuvuzela_theme');
+        var theme = saved === 'dark' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
   <title>VUVUZELA DMF — Digital Marketing Agency & Performance Growth Engine</title>
   <meta name="description"
     content="Vuvuzela DMF is a premier full-service digital marketing agency engineering predictable revenue pipelines for ambitious businesses through paid advertising, high-converting web engineering, SEO, and smart automation.">

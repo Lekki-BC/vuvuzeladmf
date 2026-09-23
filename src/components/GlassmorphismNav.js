@@ -1,7 +1,10 @@
 /**
  * GlassmorphismNav - Floating glass pill navigation bar
- * Handles scroll auto-hide/reveal, mobile drawer, WhatsApp direct link, and section scrolling
+ * Handles scroll auto-hide/reveal, mobile drawer, theme switcher, and section scrolling
  */
+
+import { syncThemeToggleButtons, getCurrentTheme } from '../scripts/theme.js';
+
 export function renderGlassmorphismNav() {
   return `
     <nav class="glass-nav-container navbar-visible" id="glassNav" aria-label="Main Navigation">
@@ -20,10 +23,29 @@ export function renderGlassmorphismNav() {
           <a href="#industries" class="nav-link-item">Industries</a>
           <a href="#case-studies" class="nav-link-item">Case Studies</a>
           <a href="#roi-calculator" class="nav-link-item">Growth ROI</a>
+          <a href="#faq" class="nav-link-item">FAQ</a>
         </div>
 
-        <!-- Desktop Actions: Free Growth Audit -->
+        <!-- Desktop Actions: Theme Toggle + Free Growth Audit -->
         <div class="nav-actions-desktop">
+          <!-- Theme Switch Button -->
+          <button type="button" class="theme-toggle-btn nav-theme-toggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+            <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+
           <button type="button" class="nav-cta-btn trigger-brief-modal" aria-label="Claim Free Growth Audit">
             <span>Free Audit</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -32,14 +54,33 @@ export function renderGlassmorphismNav() {
           </button>
         </div>
 
-        <!-- Mobile Hamburger Button -->
-        <button type="button" class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu">
-          <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="3" y1="6" x2="21" y2="6"/>
-            <line x1="3" y1="12" x2="21" y2="12"/>
-            <line x1="3" y1="18" x2="21" y2="18"/>
-          </svg>
-        </button>
+        <!-- Mobile Nav Actions (Theme Switch + Hamburger Button) -->
+        <div class="nav-mobile-actions">
+          <button type="button" class="theme-toggle-btn mobile-quick-theme-toggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+            <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+
+          <button type="button" class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu">
+            <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
       </div>
     </nav>
 
@@ -51,6 +92,28 @@ export function renderGlassmorphismNav() {
       <a href="#industries" class="mobile-nav-item">Industries</a>
       <a href="#case-studies" class="mobile-nav-item">Case Studies</a>
       <a href="#roi-calculator" class="mobile-nav-item">Growth ROI</a>
+      <a href="#faq" class="mobile-nav-item">FAQ</a>
+
+      <div class="mobile-theme-row">
+        <span class="mobile-theme-label">Theme Mode</span>
+        <button type="button" class="theme-toggle-btn mobile-menu-theme-btn" aria-label="Toggle theme">
+          <svg class="theme-icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="theme-icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <span class="theme-toggle-label">Dark Mode</span>
+        </button>
+      </div>
 
       <button type="button" class="mobile-nav-cta trigger-brief-modal">
         <span>Free Growth Audit</span>
@@ -69,6 +132,10 @@ export function initGlassmorphismNav() {
   const backdrop = document.getElementById('mobileNavBackdrop');
 
   if (!navContainer) return;
+
+  // Synchronize theme toggle icons to current active theme
+  const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+  syncThemeToggleButtons(currentTheme);
 
   // Auto-hide on scroll down, reveal on scroll up
   let lastScrollY = window.scrollY;
@@ -121,8 +188,8 @@ export function initGlassmorphismNav() {
 
   backdrop?.addEventListener('click', closeMenu);
 
-  // Close menu on navigation click
-  mobileMenu?.querySelectorAll('a, button').forEach((link) => {
+  // Close menu on navigation click (except theme toggle)
+  mobileMenu?.querySelectorAll('a, .mobile-nav-cta').forEach((link) => {
     link.addEventListener('click', closeMenu);
   });
 }

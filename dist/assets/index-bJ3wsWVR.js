@@ -1,4 +1,4 @@
-(function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const a of document.querySelectorAll('link[rel="modulepreload"]'))e(a);new MutationObserver(a=>{for(const o of a)if(o.type==="childList")for(const s of o.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&e(s)}).observe(document,{childList:!0,subtree:!0});function t(a){const o={};return a.integrity&&(o.integrity=a.integrity),a.referrerPolicy&&(o.referrerPolicy=a.referrerPolicy),a.crossOrigin==="use-credentials"?o.credentials="include":a.crossOrigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function e(a){if(a.ep)return;a.ep=!0;const o=t(a);fetch(a.href,o)}})();function x(n="auroraCanvas"){const i=document.getElementById(n);if(!i)return;const t=i.getContext("2d");if(!t)return;let e=i.width=window.innerWidth,a=i.height=window.innerHeight;const o=()=>{e=i.width=window.innerWidth,a=i.height=window.innerHeight};window.addEventListener("resize",o,{passive:!0});let s=0;function l(){s+=.003,t.clearRect(0,0,e,a),t.fillStyle="#09090b",t.fillRect(0,0,e,a);const b=e*.4+Math.sin(s*.7)*(e*.15),c=a*.25+Math.cos(s*.9)*(a*.1),f=Math.max(e,a)*.45,m=t.createRadialGradient(b,c,0,b,c,f);m.addColorStop(0,"rgba(56, 189, 248, 0.16)"),m.addColorStop(.5,"rgba(30, 58, 138, 0.08)"),m.addColorStop(1,"rgba(9, 9, 11, 0)"),t.fillStyle=m,t.fillRect(0,0,e,a);const v=e*.65+Math.cos(s*.8)*(e*.2),h=a*.35+Math.sin(s*.6)*(a*.12),w=Math.max(e,a)*.5,g=t.createRadialGradient(v,h,0,v,h,w);g.addColorStop(0,"rgba(99, 102, 241, 0.14)"),g.addColorStop(.5,"rgba(15, 23, 42, 0.06)"),g.addColorStop(1,"rgba(9, 9, 11, 0)"),t.fillStyle=g,t.fillRect(0,0,e,a);const d=e*.5+Math.sin(s*.5)*(e*.25),r=a*.65+Math.cos(s*.7)*(a*.15),u=Math.max(e,a)*.4,y=t.createRadialGradient(d,r,0,d,r,u);y.addColorStop(0,"rgba(16, 185, 129, 0.08)"),y.addColorStop(.5,"rgba(15, 23, 42, 0.04)"),y.addColorStop(1,"rgba(9, 9, 11, 0)"),t.fillStyle=y,t.fillRect(0,0,e,a),requestAnimationFrame(l)}l()}function S(){return`
+(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const n of document.querySelectorAll('link[rel="modulepreload"]'))e(n);new MutationObserver(n=>{for(const s of n)if(s.type==="childList")for(const o of s.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&e(o)}).observe(document,{childList:!0,subtree:!0});function i(n){const s={};return n.integrity&&(s.integrity=n.integrity),n.referrerPolicy&&(s.referrerPolicy=n.referrerPolicy),n.crossOrigin==="use-credentials"?s.credentials="include":n.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function e(n){if(n.ep)return;n.ep=!0;const s=i(n);fetch(n.href,s)}})();function M(a="auroraCanvas"){const t=document.getElementById(a);if(!t)return;const i=t.getContext("2d");if(!i)return;let e=t.width=window.innerWidth,n=t.height=window.innerHeight;const s=()=>{e=t.width=window.innerWidth,n=t.height=window.innerHeight};window.addEventListener("resize",s,{passive:!0});let o=0;function c(){o+=.003,i.clearRect(0,0,e,n);const u=document.documentElement.getAttribute("data-theme")==="dark";i.fillStyle=u?"#09090b":"#f8fafc",i.fillRect(0,0,e,n);const p=e*.4+Math.sin(o*.7)*(e*.15),y=n*.25+Math.cos(o*.9)*(n*.1),m=Math.max(e,n)*.48,d=i.createRadialGradient(p,y,0,p,y,m);u?(d.addColorStop(0,"rgba(56, 189, 248, 0.16)"),d.addColorStop(.5,"rgba(30, 58, 138, 0.08)"),d.addColorStop(1,"rgba(9, 9, 11, 0)")):(d.addColorStop(0,"rgba(56, 189, 248, 0.12)"),d.addColorStop(.5,"rgba(186, 230, 253, 0.06)"),d.addColorStop(1,"rgba(248, 250, 252, 0)")),i.fillStyle=d,i.fillRect(0,0,e,n);const h=e*.65+Math.cos(o*.8)*(e*.2),b=n*.35+Math.sin(o*.6)*(n*.12),w=Math.max(e,n)*.52,l=i.createRadialGradient(h,b,0,h,b,w);u?(l.addColorStop(0,"rgba(99, 102, 241, 0.14)"),l.addColorStop(.5,"rgba(15, 23, 42, 0.06)"),l.addColorStop(1,"rgba(9, 9, 11, 0)")):(l.addColorStop(0,"rgba(129, 140, 248, 0.11)"),l.addColorStop(.5,"rgba(224, 231, 255, 0.05)"),l.addColorStop(1,"rgba(248, 250, 252, 0)")),i.fillStyle=l,i.fillRect(0,0,e,n);const r=e*.5+Math.sin(o*.5)*(e*.25),v=n*.65+Math.cos(o*.7)*(n*.15),k=Math.max(e,n)*.42,f=i.createRadialGradient(r,v,0,r,v,k);u?(f.addColorStop(0,"rgba(16, 185, 129, 0.08)"),f.addColorStop(.5,"rgba(15, 23, 42, 0.04)"),f.addColorStop(1,"rgba(9, 9, 11, 0)")):(f.addColorStop(0,"rgba(52, 211, 153, 0.08)"),f.addColorStop(.5,"rgba(209, 250, 229, 0.04)"),f.addColorStop(1,"rgba(248, 250, 252, 0)")),i.fillStyle=f,i.fillRect(0,0,e,n),requestAnimationFrame(c)}c()}function B(){return`
     <div class="modal-overlay" id="briefModalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <div class="modal-content-card">
         <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">×</button>
@@ -7,7 +7,7 @@
           <span>Zero-Obligation Growth Diagnostic</span>
         </div>
 
-        <h3 id="modalTitle" style="font-size: 1.65rem; font-weight: 800; color: #ffffff; line-height: 1.25;">
+        <h3 id="modalTitle" style="font-size: 1.65rem; font-weight: 800; color: var(--text-primary); line-height: 1.25;">
           Claim Your Free Digital Marketing &amp; Growth Audit
         </h3>
         <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">
@@ -32,7 +32,7 @@
 
           <div class="form-group">
             <label for="inputSector">Primary Industry</label>
-            <select id="inputSector" class="calc-type-select" style="background: rgba(255,255,255,0.06); width: 100%;">
+            <select id="inputSector" class="calc-type-select" style="width: 100%;">
               <option value="ecommerce" selected>E-Commerce & DTC Brand</option>
               <option value="b2b">B2B & Professional Services</option>
               <option value="clinics">Private Healthcare & Clinic</option>
@@ -44,7 +44,7 @@
 
           <div class="form-group">
             <label for="inputGrowthGoal">Primary Growth Objective</label>
-            <select id="inputGrowthGoal" class="calc-type-select" style="background: rgba(255,255,255,0.06); width: 100%;">
+            <select id="inputGrowthGoal" class="calc-type-select" style="width: 100%;">
               <option value="paid-media">Scale Paid Ads & Maximize ROAS (Meta & Google)</option>
               <option value="web-cro">Rebuild High-Converting Website & Sales Funnel</option>
               <option value="seo">Dominate Google Search (Technical & Local SEO)</option>
@@ -67,14 +67,14 @@
               <polyline points="20 6 9 17 4 12"/>
             </svg>
           </div>
-          <h4 style="font-size: 1.4rem; font-weight: 700; color: #ffffff; margin-bottom: 0.5rem;">Audit Request Confirmed!</h4>
+          <h4 style="font-size: 1.4rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Audit Request Confirmed!</h4>
           <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5;">
             Our solutions engineering team will prepare your custom conversational prototype and contact you within 15 minutes.
           </p>
         </div>
       </div>
     </div>
-  `}function M(){const n=document.getElementById("briefModalOverlay"),i=document.getElementById("modalCloseBtn"),t=document.getElementById("briefModalForm"),e=document.getElementById("modalSuccessState"),a=()=>{n==null||n.classList.add("open"),document.body.style.overflow="hidden"},o=()=>{n==null||n.classList.remove("open"),document.body.style.overflow=""};document.addEventListener("click",s=>{const l=s.target;l!=null&&l.closest(".trigger-brief-modal")&&(s.preventDefault(),a())}),i==null||i.addEventListener("click",o),n==null||n.addEventListener("click",s=>{s.target===n&&o()}),document.addEventListener("keydown",s=>{s.key==="Escape"&&(n!=null&&n.classList.contains("open"))&&o()}),t==null||t.addEventListener("submit",s=>{s.preventDefault(),t&&e&&(t.style.display="none",e.style.display="block")})}function A(){return`
+  `}function T(){const a=document.getElementById("briefModalOverlay"),t=document.getElementById("modalCloseBtn"),i=document.getElementById("briefModalForm"),e=document.getElementById("modalSuccessState"),n=()=>{a==null||a.classList.add("open"),document.body.style.overflow="hidden"},s=()=>{a==null||a.classList.remove("open"),document.body.style.overflow=""};document.addEventListener("click",o=>{const c=o.target;c!=null&&c.closest(".trigger-brief-modal")&&(o.preventDefault(),n())}),t==null||t.addEventListener("click",s),a==null||a.addEventListener("click",o=>{o.target===a&&s()}),document.addEventListener("keydown",o=>{o.key==="Escape"&&(a!=null&&a.classList.contains("open"))&&s()}),i==null||i.addEventListener("submit",o=>{o.preventDefault(),i&&e&&(i.style.display="none",e.style.display="block")})}function E(){return`
     <div class="whatsapp-float-widget" id="whatsappFloatWidget">
       <a href="https://wa.me/2347011961582?text=Hello%20Vuvuzela%20DMF%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20digital%20marketing%20services"
          target="_blank"
@@ -88,7 +88,7 @@
         <span class="whatsapp-ping" aria-hidden="true"></span>
       </a>
     </div>
-  `}function B(){return`
+  `}const C="vuvuzela_theme";function q(){const a=localStorage.getItem(C);return a==="dark"||a==="light"?a:"light"}function S(a){const t=a==="dark"?"dark":"light";return document.documentElement.setAttribute("data-theme",t),localStorage.setItem(C,t),A(t),window.dispatchEvent(new CustomEvent("themechange",{detail:{theme:t}})),t}function I(){const t=(document.documentElement.getAttribute("data-theme")||"light")==="dark"?"light":"dark";return S(t)}function A(a){const t=a==="dark";document.querySelectorAll(".theme-toggle-btn").forEach(e=>{e.setAttribute("aria-label",t?"Switch to Light Theme":"Switch to Dark Theme"),e.setAttribute("title",t?"Switch to Light Theme":"Switch to Dark Theme"),e.setAttribute("aria-pressed",t?"true":"false");const n=e.querySelector(".theme-icon-sun"),s=e.querySelector(".theme-icon-moon"),o=e.querySelector(".theme-toggle-label");n&&s&&(t?(n.style.display="block",s.style.display="none"):(n.style.display="none",s.style.display="block")),o&&(o.textContent=t?"Light Mode":"Dark Mode")})}function L(){const a=q();S(a),document.addEventListener("click",t=>{t.target.closest(".theme-toggle-btn")&&(t.preventDefault(),t.stopPropagation(),I())})}function P(){return`
     <nav class="glass-nav-container navbar-visible" id="glassNav" aria-label="Main Navigation">
       <div class="glass-nav-bar">
         <!-- Brand Logo (Pure Typography without added icon mark) -->
@@ -105,10 +105,29 @@
           <a href="#industries" class="nav-link-item">Industries</a>
           <a href="#case-studies" class="nav-link-item">Case Studies</a>
           <a href="#roi-calculator" class="nav-link-item">Growth ROI</a>
+          <a href="#faq" class="nav-link-item">FAQ</a>
         </div>
 
-        <!-- Desktop Actions: Free Growth Audit -->
+        <!-- Desktop Actions: Theme Toggle + Free Growth Audit -->
         <div class="nav-actions-desktop">
+          <!-- Theme Switch Button -->
+          <button type="button" class="theme-toggle-btn nav-theme-toggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+            <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+
           <button type="button" class="nav-cta-btn trigger-brief-modal" aria-label="Claim Free Growth Audit">
             <span>Free Audit</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -117,14 +136,33 @@
           </button>
         </div>
 
-        <!-- Mobile Hamburger Button -->
-        <button type="button" class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu">
-          <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="3" y1="6" x2="21" y2="6"/>
-            <line x1="3" y1="12" x2="21" y2="12"/>
-            <line x1="3" y1="18" x2="21" y2="18"/>
-          </svg>
-        </button>
+        <!-- Mobile Nav Actions (Theme Switch + Hamburger Button) -->
+        <div class="nav-mobile-actions">
+          <button type="button" class="theme-toggle-btn mobile-quick-theme-toggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+            <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+
+          <button type="button" class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu">
+            <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
       </div>
     </nav>
 
@@ -136,6 +174,28 @@
       <a href="#industries" class="mobile-nav-item">Industries</a>
       <a href="#case-studies" class="mobile-nav-item">Case Studies</a>
       <a href="#roi-calculator" class="mobile-nav-item">Growth ROI</a>
+      <a href="#faq" class="mobile-nav-item">FAQ</a>
+
+      <div class="mobile-theme-row">
+        <span class="mobile-theme-label">Theme Mode</span>
+        <button type="button" class="theme-toggle-btn mobile-menu-theme-btn" aria-label="Toggle theme">
+          <svg class="theme-icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="theme-icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <span class="theme-toggle-label">Dark Mode</span>
+        </button>
+      </div>
 
       <button type="button" class="mobile-nav-cta trigger-brief-modal">
         <span>Free Growth Audit</span>
@@ -144,7 +204,7 @@
         </svg>
       </button>
     </div>
-  `}function I(){const n=document.getElementById("glassNav"),i=document.getElementById("mobileNavToggle"),t=document.getElementById("mobileNavMenu"),e=document.getElementById("mobileNavBackdrop");if(!n)return;let a=window.scrollY;window.addEventListener("scroll",()=>{const l=window.scrollY;l>60?l>a&&l-a>6?(n.classList.add("navbar-hidden"),n.classList.remove("navbar-visible")):a-l>6&&(n.classList.remove("navbar-hidden"),n.classList.add("navbar-visible")):(n.classList.remove("navbar-hidden"),n.classList.add("navbar-visible")),a=l},{passive:!0});const o=()=>{t==null||t.classList.add("open"),e==null||e.classList.add("open"),document.body.style.overflow="hidden"},s=()=>{t==null||t.classList.remove("open"),e==null||e.classList.remove("open"),document.body.style.overflow=""};i==null||i.addEventListener("click",()=>{t!=null&&t.classList.contains("open")?s():o()}),e==null||e.addEventListener("click",s),t==null||t.querySelectorAll("a, button").forEach(l=>{l.addEventListener("click",s)})}function E(){return`
+  `}function R(){const a=document.getElementById("glassNav"),t=document.getElementById("mobileNavToggle"),i=document.getElementById("mobileNavMenu"),e=document.getElementById("mobileNavBackdrop");if(!a)return;const n=document.documentElement.getAttribute("data-theme")||"light";A(n);let s=window.scrollY;window.addEventListener("scroll",()=>{const u=window.scrollY;u>60?u>s&&u-s>6?(a.classList.add("navbar-hidden"),a.classList.remove("navbar-visible")):s-u>6&&(a.classList.remove("navbar-hidden"),a.classList.add("navbar-visible")):(a.classList.remove("navbar-hidden"),a.classList.add("navbar-visible")),s=u},{passive:!0});const o=()=>{i==null||i.classList.add("open"),e==null||e.classList.add("open"),document.body.style.overflow="hidden"},c=()=>{i==null||i.classList.remove("open"),e==null||e.classList.remove("open"),document.body.style.overflow=""};t==null||t.addEventListener("click",()=>{i!=null&&i.classList.contains("open")?c():o()}),e==null||e.addEventListener("click",c),i==null||i.querySelectorAll("a, .mobile-nav-cta").forEach(u=>{u.addEventListener("click",c)})}function O(){return`
     <section class="hero-section" id="hero">
       <div class="hero-inner">
         <!-- Main Headline with Rotating Word Badge -->
@@ -208,7 +268,7 @@
         </div>
       </div>
     </section>
-  `}function L(){const n=document.getElementById("rotatingWordPill");if(!n)return;const i=["Revenue","ROAS","Pipeline","Acquisition","Conversion","Growth"];let t=0;setInterval(()=>{n.style.opacity="0",n.style.transform="translateY(-12px) scale(0.95)",setTimeout(()=>{t=(t+1)%i.length,n.textContent=i[t],n.style.transform="translateY(12px) scale(0.95)",requestAnimationFrame(()=>{n.style.opacity="1",n.style.transform="translateY(0) scale(1)"})},250)},2200)}function T(){return`
+  `}function D(){const a=document.getElementById("rotatingWordPill");if(!a)return;const t=["Revenue","ROAS","Pipeline","Acquisition","Conversion","Growth"];let i=0;setInterval(()=>{a.style.opacity="0",a.style.transform="translateY(-12px) scale(0.95)",setTimeout(()=>{i=(i+1)%t.length,a.textContent=t[i],a.style.transform="translateY(12px) scale(0.95)",requestAnimationFrame(()=>{a.style.opacity="1",a.style.transform="translateY(0) scale(1)"})},250)},2200)}function W(){return`
     <section class="section-pad" id="problem-solution">
       <div class="container">
         <!-- Section Header -->
@@ -349,7 +409,7 @@
         </div>
       </div>
     </section>
-  `}function P(){return`
+  `}function F(){return`
     <section class="light-features-section" id="services">
       <span id="features" style="position: absolute; top: -100px;"></span>
       <div class="light-dot-grid"></div>
@@ -497,12 +557,12 @@
         </div>
       </div>
     </section>
-  `}function R(){const n=document.getElementById("chatSimBubbleBot"),i=document.getElementById("chatSimBubbleUser"),t=document.getElementById("chatSimTyping");if(n&&i&&t){const o=[{bot:"Good evening! How may I assist you?",user:"I'd like to check pricing and availability"},{bot:"We have 3 slots open for this Saturday!",user:"Can I book the 11:00 AM slot?"},{bot:"Confirmed! A calendar invite has been sent to your email.",user:"Thank you, that was lightning fast!"}];let s=0;setInterval(()=>{t.style.display="inline-flex",setTimeout(()=>{t.style.display="none",s=(s+1)%o.length,n.textContent=o[s].bot,i.textContent=o[s].user},900)},4500)}const e=document.getElementById("interactiveCalGrid"),a=document.getElementById("calStatusMessage");e&&a&&e.querySelectorAll(".cal-day").forEach(o=>{o.addEventListener("click",()=>{e.querySelectorAll(".cal-day").forEach(l=>l.classList.remove("active-day")),o.classList.add("active-day");const s=o.getAttribute("data-day")||o.textContent;a.innerHTML=`
+  `}function G(){const a=document.getElementById("chatSimBubbleBot"),t=document.getElementById("chatSimBubbleUser"),i=document.getElementById("chatSimTyping");if(a&&t&&i){const s=[{bot:"Good evening! How may I assist you?",user:"I'd like to check pricing and availability"},{bot:"We have 3 slots open for this Saturday!",user:"Can I book the 11:00 AM slot?"},{bot:"Confirmed! A calendar invite has been sent to your email.",user:"Thank you, that was lightning fast!"}];let o=0;setInterval(()=>{i.style.display="inline-flex",setTimeout(()=>{i.style.display="none",o=(o+1)%s.length,a.textContent=s[o].bot,t.textContent=s[o].user},900)},4500)}const e=document.getElementById("interactiveCalGrid"),n=document.getElementById("calStatusMessage");e&&n&&e.querySelectorAll(".cal-day").forEach(s=>{s.addEventListener("click",()=>{e.querySelectorAll(".cal-day").forEach(c=>c.classList.remove("active-day")),s.classList.add("active-day");const o=s.getAttribute("data-day")||s.textContent;n.innerHTML=`
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <polyline points="20 6 9 17 4 12"/>
           </svg>
-          <span>Slot confirmed for the ${s}th at 2:00 PM</span>
-        `})})}const C={ecommerce:{badge:"E-Commerce & High-Growth DTC",title:"Scale E-Commerce Revenue & Blended ROAS",desc:"High-ROI Meta, TikTok, and Google Performance Max campaigns paired with conversion-rate-optimized product pages, abandoned cart WhatsApp recovery, and high-LTV email retention flows.",quote:'"Vuvuzela scaled our DTC brand from $35k to $140k/month in 90 days. Their ad creative testing and checkout CRO doubled our blended return on ad spend to 4.6x."',author:"— Julian Vance, E-Commerce Brand Founder",agentName:"Chloe — VIP Concierge AI",agentPhone:"Store Support & VIP Concierge Active",prompts:["Best Sellers","Discount Code","Track My Order","Bundle Offers"],initialMessages:[{sender:"customer",text:"Hey, I saw your Instagram ad for the Winter Collection. Do you have a bundle discount?"},{sender:"ai",text:"Hey there! Yes, our 3-piece Winter Bundle is currently 25% off with free express shipping. Would you like the direct checkout link?"},{sender:"customer",text:"Yes please, and does it include a 30-day return guarantee?"},{sender:"ai",text:"100%! We provide 30-day no-questions-asked free exchanges and returns. Here is your VIP checkout link: [Claim Bundle Discount]."}],responses:{"Best Sellers":"Our top-ranked item this week is the Apex All-Weather Parka with over 450 verified 5-star customer reviews!","Discount Code":"Use promo code VUVUZELA15 at checkout to receive 15% off your first order today.","Track My Order":"Please share your 6-digit order number or the email address used during purchase and I will fetch live courier tracking.","Bundle Offers":"Our Ultimate Essentials Bundle saves you 30% versus purchasing individual items and includes priority dispatch."}},b2b:{badge:"B2B & Professional Services",title:"Predictable Pipeline for High-Ticket B2B & Consultancies",desc:"Target corporate decision-makers with precision Google Search & LinkedIn funnels, authoritative case study landing pages, and automated qualification that delivers calendar-ready sales consultations.",quote:'"We used to rely on sporadic referrals. Vuvuzela built a predictable inbound engine that adds 15 to 20 qualified corporate strategy consultations to our calendar every month."',author:"— Marco Rossi, Managing Partner",agentName:"Marcus — B2B Strategy Intake",agentPhone:"Corporate Consulting Pipeline Active",prompts:["Book Consultation","Service Retainers","Case Studies","Corporate Audit"],initialMessages:[{sender:"customer",text:"We are looking to overhaul our digital acquisition and need to know your agency retainer tiers."},{sender:"ai",text:"Welcome! Our dedicated growth partnerships range from €3,500 to €8,500/month depending on ad spend velocity and engineering scope."},{sender:"customer",text:"Can we schedule a 20-minute strategic discovery call this week?"},{sender:"ai",text:"Certainly. I have Wednesday at 2:00 PM or Thursday at 10:30 AM open with our Growth Director. Which slot works best for your team?"}],responses:{"Book Consultation":"I have reserved a 20-minute discovery session for your team. A calendar invite with Google Meet coordinates is on its way.","Service Retainers":"Our retainers cover full-funnel management: Paid Ads (Meta/Google), CRO web engineering, creative testing, and 24/7 lead automation.","Case Studies":"We recently scaled an e-commerce brand to 4.6x ROAS and a B2B firm to €180k monthly recurring revenue. Would you like our breakdown PDF?","Corporate Audit":"Our free growth audit evaluates your current ad accounts, tracking architecture, and conversion drop-offs with an actionable 90-day roadmap."}},clinics:{badge:"Private Clinics & Healthcare",title:"High-Value Patient Inbound & Local Dominance",desc:"Capture high-ticket private patient inquiries with local Google search dominance, credible medical landing pages, and 24/7 patient intake triage across web and WhatsApp.",quote:'"Patients booking high-ticket cosmetic dental treatments jumped 80%. Their local Google ad campaigns and rapid WhatsApp triage completely filled our treatment rooms."',author:"— Dr. Sarah O'Connor, Clinic Director",agentName:"Aria — Clinical Intake Concierge",agentPhone:"Patient Help Line Active",prompts:["Emergency Slot","Dental Implants Info","Insurance Check","Teeth Whitening Cost"],initialMessages:[{sender:"customer",text:"I saw your clinic on Google Search. Do you have an emergency appointment open tomorrow morning?"},{sender:"ai",text:"Hello! Yes, we hold emergency triage slots every morning at 8:30 AM and 9:15 AM. Are you experiencing severe pain?"},{sender:"customer",text:"Moderate pain from a cracked molar. 8:30 AM would be a lifesaver."},{sender:"ai",text:"I have reserved the 8:30 AM emergency slot for you with Dr. O'Connor. Our front desk has sent an SMS confirmation with parking details."}],responses:{"Emergency Slot":"We have emergency walk-in availability reserved every morning. I can book you for 8:30 AM right now.","Dental Implants Info":"Our premium dental implant consultations include full 3D CBCT scans and treatment financing options from €89/month.","Insurance Check":"We accept VHI, Laya, Irish Life Health, and PRSI dental benefit claims directly at our front desk.","Teeth Whitening Cost":"Our Philips Zoom professional whitening package is €295, including take-home maintenance trays."}},realestate:{badge:"Real Estate & Luxury Property",title:"High-Ticket Investor & Buyer Acquisition",desc:"Precision Meta and Google Search campaigns, bespoke single-development landing pages, and 24/7 WhatsApp investor triage that qualifies budgets and schedules private viewings.",quote:'"Vuvuzela generated over €4.2M in qualified buyer pipeline for our luxury residential developments within 60 days of ad launch."',author:"— James Wilson, Principal Broker",agentName:"Liam — Luxury Property Concierge",agentPhone:"Property Acquisition Line Active",prompts:["Penthouse Listings","Schedule Viewing","Investment Returns","Project Brochure"],initialMessages:[{sender:"customer",text:"Hi, I saw your ad for the Waterfront Residences. Are there 3-bedroom penthouses available?"},{sender:"ai",text:"Good day! Yes, we have two 3-bedroom corner penthouses remaining with panoramic ocean views and private rooftop terraces."},{sender:"customer",text:"Can I schedule a private walkthrough this Friday?"},{sender:"ai",text:"Certainly! I have 11:30 AM or 3:00 PM open this Friday. Would 11:30 AM suit your schedule? I will also dispatch the architectural brochure to your WhatsApp."}],responses:{"Penthouse Listings":"We have 2 corner penthouses starting at €1.45M with bespoke Italian kitchens, smart automation, and private underground parking.","Schedule Viewing":"You're scheduled for Friday at 11:30 AM! Our development director will welcome you at the private presentation lounge.","Investment Returns":"Projected rental yields on this development sit between 7.2% and 8.4% annually, with full turnkey tenancy management provided.","Project Brochure":"The high-resolution architectural plans and specification brochure have been sent to your contact number."}}};function O(){const i=C["ecommerce"];return`
+          <span>Slot confirmed for the ${o}th at 2:00 PM</span>
+        `})})}const x={ecommerce:{badge:"E-Commerce & High-Growth DTC",title:"Scale E-Commerce Revenue & Blended ROAS",desc:"High-ROI Meta, TikTok, and Google Performance Max campaigns paired with conversion-rate-optimized product pages, abandoned cart WhatsApp recovery, and high-LTV email retention flows.",quote:'"Vuvuzela scaled our DTC brand from $35k to $140k/month in 90 days. Their ad creative testing and checkout CRO doubled our blended return on ad spend to 4.6x."',author:"— Julian Vance, E-Commerce Brand Founder",agentName:"Chloe — VIP Concierge AI",agentPhone:"Store Support & VIP Concierge Active",prompts:["Best Sellers","Discount Code","Track My Order","Bundle Offers"],initialMessages:[{sender:"customer",text:"Hey, I saw your Instagram ad for the Winter Collection. Do you have a bundle discount?"},{sender:"ai",text:"Hey there! Yes, our 3-piece Winter Bundle is currently 25% off with free express shipping. Would you like the direct checkout link?"},{sender:"customer",text:"Yes please, and does it include a 30-day return guarantee?"},{sender:"ai",text:"100%! We provide 30-day no-questions-asked free exchanges and returns. Here is your VIP checkout link: [Claim Bundle Discount]."}],responses:{"Best Sellers":"Our top-ranked item this week is the Apex All-Weather Parka with over 450 verified 5-star customer reviews!","Discount Code":"Use promo code VUVUZELA15 at checkout to receive 15% off your first order today.","Track My Order":"Please share your 6-digit order number or the email address used during purchase and I will fetch live courier tracking.","Bundle Offers":"Our Ultimate Essentials Bundle saves you 30% versus purchasing individual items and includes priority dispatch."}},b2b:{badge:"B2B & Professional Services",title:"Predictable Pipeline for High-Ticket B2B & Consultancies",desc:"Target corporate decision-makers with precision Google Search & LinkedIn funnels, authoritative case study landing pages, and automated qualification that delivers calendar-ready sales consultations.",quote:'"We used to rely on sporadic referrals. Vuvuzela built a predictable inbound engine that adds 15 to 20 qualified corporate strategy consultations to our calendar every month."',author:"— Marco Rossi, Managing Partner",agentName:"Marcus — B2B Strategy Intake",agentPhone:"Corporate Consulting Pipeline Active",prompts:["Book Consultation","Service Retainers","Case Studies","Corporate Audit"],initialMessages:[{sender:"customer",text:"We are looking to overhaul our digital acquisition and need to know your agency retainer tiers."},{sender:"ai",text:"Welcome! Our dedicated growth partnerships range from €3,500 to €8,500/month depending on ad spend velocity and engineering scope."},{sender:"customer",text:"Can we schedule a 20-minute strategic discovery call this week?"},{sender:"ai",text:"Certainly. I have Wednesday at 2:00 PM or Thursday at 10:30 AM open with our Growth Director. Which slot works best for your team?"}],responses:{"Book Consultation":"I have reserved a 20-minute discovery session for your team. A calendar invite with Google Meet coordinates is on its way.","Service Retainers":"Our retainers cover full-funnel management: Paid Ads (Meta/Google), CRO web engineering, creative testing, and 24/7 lead automation.","Case Studies":"We recently scaled an e-commerce brand to 4.6x ROAS and a B2B firm to €180k monthly recurring revenue. Would you like our breakdown PDF?","Corporate Audit":"Our free growth audit evaluates your current ad accounts, tracking architecture, and conversion drop-offs with an actionable 90-day roadmap."}},clinics:{badge:"Private Clinics & Healthcare",title:"High-Value Patient Inbound & Local Dominance",desc:"Capture high-ticket private patient inquiries with local Google search dominance, credible medical landing pages, and 24/7 patient intake triage across web and WhatsApp.",quote:'"Patients booking high-ticket cosmetic dental treatments jumped 80%. Their local Google ad campaigns and rapid WhatsApp triage completely filled our treatment rooms."',author:"— Dr. Sarah O'Connor, Clinic Director",agentName:"Aria — Clinical Intake Concierge",agentPhone:"Patient Help Line Active",prompts:["Emergency Slot","Dental Implants Info","Insurance Check","Teeth Whitening Cost"],initialMessages:[{sender:"customer",text:"I saw your clinic on Google Search. Do you have an emergency appointment open tomorrow morning?"},{sender:"ai",text:"Hello! Yes, we hold emergency triage slots every morning at 8:30 AM and 9:15 AM. Are you experiencing severe pain?"},{sender:"customer",text:"Moderate pain from a cracked molar. 8:30 AM would be a lifesaver."},{sender:"ai",text:"I have reserved the 8:30 AM emergency slot for you with Dr. O'Connor. Our front desk has sent an SMS confirmation with parking details."}],responses:{"Emergency Slot":"We have emergency walk-in availability reserved every morning. I can book you for 8:30 AM right now.","Dental Implants Info":"Our premium dental implant consultations include full 3D CBCT scans and treatment financing options from €89/month.","Insurance Check":"We accept VHI, Laya, Irish Life Health, and PRSI dental benefit claims directly at our front desk.","Teeth Whitening Cost":"Our Philips Zoom professional whitening package is €295, including take-home maintenance trays."}},realestate:{badge:"Real Estate & Luxury Property",title:"High-Ticket Investor & Buyer Acquisition",desc:"Precision Meta and Google Search campaigns, bespoke single-development landing pages, and 24/7 WhatsApp investor triage that qualifies budgets and schedules private viewings.",quote:'"Vuvuzela generated over €4.2M in qualified buyer pipeline for our luxury residential developments within 60 days of ad launch."',author:"— James Wilson, Principal Broker",agentName:"Liam — Luxury Property Concierge",agentPhone:"Property Acquisition Line Active",prompts:["Penthouse Listings","Schedule Viewing","Investment Returns","Project Brochure"],initialMessages:[{sender:"customer",text:"Hi, I saw your ad for the Waterfront Residences. Are there 3-bedroom penthouses available?"},{sender:"ai",text:"Good day! Yes, we have two 3-bedroom corner penthouses remaining with panoramic ocean views and private rooftop terraces."},{sender:"customer",text:"Can I schedule a private walkthrough this Friday?"},{sender:"ai",text:"Certainly! I have 11:30 AM or 3:00 PM open this Friday. Would 11:30 AM suit your schedule? I will also dispatch the architectural brochure to your WhatsApp."}],responses:{"Penthouse Listings":"We have 2 corner penthouses starting at €1.45M with bespoke Italian kitchens, smart automation, and private underground parking.","Schedule Viewing":"You're scheduled for Friday at 11:30 AM! Our development director will welcome you at the private presentation lounge.","Investment Returns":"Projected rental yields on this development sit between 7.2% and 8.4% annually, with full turnkey tenancy management provided.","Project Brochure":"The high-resolution architectural plans and specification brochure have been sent to your contact number."}}};function H(){const t=x["ecommerce"];return`
     <section class="section-pad" id="industries">
       <span id="ai-team" style="position: absolute; top: -100px;"></span>
       <div class="container">
@@ -513,10 +573,10 @@
             <span>Specialized Growth Playbooks</span>
           </div>
           <h2 class="section-title" id="indSectionTitle">
-            ${i.title}
+            ${t.title}
           </h2>
           <p class="section-subtitle" id="indSectionDesc">
-            ${i.desc}
+            ${t.desc}
           </p>
         </div>
 
@@ -533,10 +593,10 @@
           <!-- Left Column -->
           <div class="ind-info-pane">
             <div class="pill-badge" id="indBadgeText" style="align-self: flex-start; margin-bottom: 0;">
-              ${i.badge}
+              ${t.badge}
             </div>
 
-            <h3 style="font-size: 2rem; font-weight: 800; color: #ffffff; line-height: 1.25;">
+            <h3 style="font-size: 2rem; font-weight: 800; color: var(--text-primary); line-height: 1.25;">
               This is how your marketing turns traffic into paying clients.
             </h3>
 
@@ -545,8 +605,8 @@
             </p>
 
             <div class="ind-quote-card" id="indQuoteBox">
-              <p id="indQuoteText">${i.quote}</p>
-              <div class="ind-quote-author" id="indQuoteAuthor">${i.author}</div>
+              <p id="indQuoteText">${t.quote}</p>
+              <div class="ind-quote-author" id="indQuoteAuthor">${t.author}</div>
             </div>
 
             <div style="display: flex; gap: 1rem; align-items: center; margin-top: 0.5rem;">
@@ -566,9 +626,9 @@
               <div class="chat-agent-info">
                 <div class="agent-avatar-circle" id="chatAgentAvatar">AI</div>
                 <div>
-                  <div class="agent-name" id="chatAgentName">${i.agentName}</div>
+                  <div class="agent-name" id="chatAgentName">${t.agentName}</div>
                   <div class="agent-status-label">
-                    <span id="chatAgentPhone">${i.agentPhone}</span>
+                    <span id="chatAgentPhone">${t.agentPhone}</span>
                   </div>
                 </div>
               </div>
@@ -577,17 +637,17 @@
 
             <!-- Messages Window -->
             <div class="chat-messages-scroll" id="chatMessagesScroll">
-              ${i.initialMessages.map(t=>`
-                <div class="chat-msg ${t.sender==="customer"?"customer-msg":"ai-msg"}">
-                  ${t.text}
+              ${t.initialMessages.map(i=>`
+                <div class="chat-msg ${i.sender==="customer"?"customer-msg":"ai-msg"}">
+                  ${i.text}
                 </div>
               `).join("")}
             </div>
 
             <!-- Quick Action Prompts Bar -->
             <div class="chat-prompts-bar" id="chatPromptsBar">
-              ${i.prompts.map(t=>`
-                <button type="button" class="chat-prompt-pill" data-prompt="${t}">${t}</button>
+              ${t.prompts.map(i=>`
+                <button type="button" class="chat-prompt-pill" data-prompt="${i}">${i}</button>
               `).join("")}
             </div>
 
@@ -605,28 +665,28 @@
         </div>
       </div>
     </section>
-  `}function D(){let n="ecommerce";const i=document.querySelectorAll(".ind-tab-btn"),t=document.getElementById("indSectionTitle"),e=document.getElementById("indSectionDesc"),a=document.getElementById("indBadgeText"),o=document.getElementById("indQuoteText"),s=document.getElementById("indQuoteAuthor"),l=document.getElementById("chatAgentName"),b=document.getElementById("chatAgentPhone"),c=document.getElementById("chatMessagesScroll"),f=document.getElementById("chatPromptsBar"),m=document.getElementById("chatDemoForm"),v=document.getElementById("chatDemoInput");if(!i.length||!c)return;function h(d){const r=C[d];r&&(n=d,t&&(t.textContent=r.title),e&&(e.textContent=r.desc),a&&(a.textContent=r.badge),o&&(o.textContent=r.quote),s&&(s.textContent=r.author),l&&(l.textContent=r.agentName),b&&(b.textContent=r.agentPhone),c.innerHTML=r.initialMessages.map(u=>`
-      <div class="chat-msg ${u.sender==="customer"?"customer-msg":"ai-msg"}">
-        ${u.text}
+  `}function z(){let a="ecommerce";const t=document.querySelectorAll(".ind-tab-btn"),i=document.getElementById("indSectionTitle"),e=document.getElementById("indSectionDesc"),n=document.getElementById("indBadgeText"),s=document.getElementById("indQuoteText"),o=document.getElementById("indQuoteAuthor"),c=document.getElementById("chatAgentName"),u=document.getElementById("chatAgentPhone"),p=document.getElementById("chatMessagesScroll"),y=document.getElementById("chatPromptsBar"),m=document.getElementById("chatDemoForm"),d=document.getElementById("chatDemoInput");if(!t.length||!p)return;function h(l){const r=x[l];r&&(a=l,i&&(i.textContent=r.title),e&&(e.textContent=r.desc),n&&(n.textContent=r.badge),s&&(s.textContent=r.quote),o&&(o.textContent=r.author),c&&(c.textContent=r.agentName),u&&(u.textContent=r.agentPhone),p.innerHTML=r.initialMessages.map(v=>`
+      <div class="chat-msg ${v.sender==="customer"?"customer-msg":"ai-msg"}">
+        ${v.text}
       </div>
-    `).join(""),c.scrollTop=c.scrollHeight,f&&(f.innerHTML=r.prompts.map(u=>`
-        <button type="button" class="chat-prompt-pill" data-prompt="${u}">${u}</button>
-      `).join(""),w()))}function w(){f==null||f.querySelectorAll(".chat-prompt-pill").forEach(d=>{d.addEventListener("click",()=>{const r=d.getAttribute("data-prompt");g(r)})})}function g(d){if(!d||!d.trim())return;const r=document.createElement("div");r.className="chat-msg customer-msg",r.textContent=d,c.appendChild(r),c.scrollTop=c.scrollHeight;const u=C[n],y=u.responses[d]||`Thank you for asking! Our specialized ${u.badge} growth team will be delighted to audit your marketing.`;setTimeout(()=>{const k=document.createElement("div");k.className="chat-msg ai-msg",k.textContent=y,c.appendChild(k),c.scrollTop=c.scrollHeight},450)}i.forEach(d=>{d.addEventListener("click",()=>{i.forEach(u=>u.classList.remove("active")),d.classList.add("active");const r=d.getAttribute("data-industry");h(r)})}),m==null||m.addEventListener("submit",d=>{if(d.preventDefault(),!v)return;const r=v.value.trim();r&&(g(r),v.value="")}),w()}const p=[{quote:"Vuvuzela restructured our digital ad spend and connected our showroom WhatsApp. In month two, we generated 64 verified test drives at an acquisition cost 42% lower than our historical baseline.",author:"Mike Rodriguez",role:"Principal, Apex Automotive Group",metric:"4.2x ROAS | 64 Test Drives"},{quote:"They completely re-engineered our Meta & TikTok ad creative and rebuilt our checkout funnels. Our monthly revenue surged from $45k to over $180k within 90 days.",author:"Sarah Chen",role:"Founder & CEO, Lumina DTC Apparel",metric:"+300% Revenue Lift"},{quote:"With Vuvuzela DMF, our conversion rates jumped by 85% and inbound LinkedIn/Google Search ad inquiries became our #1 corporate deal generator. The ROI was undeniable within 30 days.",author:"Michael Torres",role:"Managing Director, Vantage B2B Advisory",metric:"+85% Conversion Rate"},{quote:"Their technical SEO and local Google ad strategy ranked our clinics #1 in our region. We went from struggling for private implant patients to a 3-week waiting list.",author:"Dr. Jennifer Walsh",role:"Clinical Director, City Dental Group",metric:"+140% Private Patients"},{quote:"What sets Vuvuzela apart is their speed-to-lead automation. Every dollar we put into paid ads is captured in seconds on WhatsApp before the lead can cross-shop.",author:"David Kim",role:"VP of Growth, Horizon Retail",metric:"4.8x Blended ROAS"},{quote:"They engineered a high-intent Meta ad funnel and custom property landing page that generated two closed luxury home listings totaling €2.4M in our first quarter.",author:"James Wilson",role:"Principal Broker, Wilson & Co Real Estate",metric:"€2.4M Closed Pipeline"}];function q(){const n=[p[0],p[1],p[2],p[0],p[1]],i=[p[3],p[4],p[5],p[3],p[4]],t=[p[2],p[5],p[1],p[2],p[5]],e=a=>`
+    `).join(""),p.scrollTop=p.scrollHeight,y&&(y.innerHTML=r.prompts.map(v=>`
+        <button type="button" class="chat-prompt-pill" data-prompt="${v}">${v}</button>
+      `).join(""),b()))}function b(){y==null||y.querySelectorAll(".chat-prompt-pill").forEach(l=>{l.addEventListener("click",()=>{const r=l.getAttribute("data-prompt");w(r)})})}function w(l){if(!l||!l.trim())return;const r=document.createElement("div");r.className="chat-msg customer-msg",r.textContent=l,p.appendChild(r),p.scrollTop=p.scrollHeight;const v=x[a],k=v.responses[l]||`Thank you for asking! Our specialized ${v.badge} growth team will be delighted to audit your marketing.`;setTimeout(()=>{const f=document.createElement("div");f.className="chat-msg ai-msg",f.textContent=k,p.appendChild(f),p.scrollTop=p.scrollHeight},450)}t.forEach(l=>{l.addEventListener("click",()=>{t.forEach(v=>v.classList.remove("active")),l.classList.add("active");const r=l.getAttribute("data-industry");h(r)})}),m==null||m.addEventListener("submit",l=>{if(l.preventDefault(),!d)return;const r=d.value.trim();r&&(w(r),d.value="")}),b()}const g=[{quote:"Vuvuzela restructured our digital ad spend and connected our showroom WhatsApp. In month two, we generated 64 verified test drives at an acquisition cost 42% lower than our historical baseline.",author:"Mike Rodriguez",role:"Principal, Apex Automotive Group",metric:"4.2x ROAS | 64 Test Drives"},{quote:"They completely re-engineered our Meta & TikTok ad creative and rebuilt our checkout funnels. Our monthly revenue surged from $45k to over $180k within 90 days.",author:"Sarah Chen",role:"Founder & CEO, Lumina DTC Apparel",metric:"+300% Revenue Lift"},{quote:"With Vuvuzela DMF, our conversion rates jumped by 85% and inbound LinkedIn/Google Search ad inquiries became our #1 corporate deal generator. The ROI was undeniable within 30 days.",author:"Michael Torres",role:"Managing Director, Vantage B2B Advisory",metric:"+85% Conversion Rate"},{quote:"Their technical SEO and local Google ad strategy ranked our clinics #1 in our region. We went from struggling for private implant patients to a 3-week waiting list.",author:"Dr. Jennifer Walsh",role:"Clinical Director, City Dental Group",metric:"+140% Private Patients"},{quote:"What sets Vuvuzela apart is their speed-to-lead automation. Every dollar we put into paid ads is captured in seconds on WhatsApp before the lead can cross-shop.",author:"David Kim",role:"VP of Growth, Horizon Retail",metric:"4.8x Blended ROAS"},{quote:"They engineered a high-intent Meta ad funnel and custom property landing page that generated two closed luxury home listings totaling €2.4M in our first quarter.",author:"James Wilson",role:"Principal Broker, Wilson & Co Real Estate",metric:"€2.4M Closed Pipeline"}];function V(){const a=[g[0],g[1],g[2],g[0],g[1]],t=[g[3],g[4],g[5],g[3],g[4]],i=[g[2],g[5],g[1],g[2],g[5]],e=n=>`
     <div class="test-card">
       <div style="display: flex; justify-content: space-between; align-items: center;">
         <span style="font-size: 0.75rem; font-weight: 700; color: #10b981; background: rgba(16, 185, 129, 0.12); padding: 0.2rem 0.6rem; border-radius: 9999px; border: 1px solid rgba(16, 185, 129, 0.25);">
-          ${a.metric}
+          ${n.metric}
         </span>
         <span style="color: #fbbf24; font-size: 0.85rem;">★★★★★</span>
       </div>
-      <p class="test-body">"${a.quote}"</p>
+      <p class="test-body">"${n.quote}"</p>
       <div class="test-author-row">
         <div class="test-avatar-placeholder">
-          ${a.author.charAt(0)}
+          ${n.author.charAt(0)}
         </div>
         <div>
-          <div class="test-name">${a.author}</div>
-          <div class="test-role">${a.role}</div>
+          <div class="test-name">${n.author}</div>
+          <div class="test-role">${n.role}</div>
         </div>
       </div>
     </div>
@@ -651,18 +711,18 @@
         <!-- 3-Column Vertical Masonry Marquee -->
         <div class="testimonials-scroll-viewport">
           <div class="test-col-track">
-            ${n.map(e).join("")}
+            ${a.map(e).join("")}
           </div>
           <div class="test-col-track reverse-scroll">
-            ${i.map(e).join("")}
+            ${t.map(e).join("")}
           </div>
           <div class="test-col-track">
-            ${t.map(e).join("")}
+            ${i.map(e).join("")}
           </div>
         </div>
       </div>
     </section>
-  `}function W(){return`
+  `}function $(){return`
     <section class="roi-calc-section" id="roi-calculator">
       <div class="container">
         <!-- Header -->
@@ -790,7 +850,72 @@
         </div>
       </div>
     </section>
-  `}function G(){const n=document.getElementById("businessSectorSelect"),i=document.getElementById("sliderVisitors"),t=document.getElementById("sliderConversion"),e=document.getElementById("sliderOrder"),a=document.getElementById("valVisitors"),o=document.getElementById("valConversion"),s=document.getElementById("valOrder"),l=document.getElementById("kpiLeads"),b=document.getElementById("kpiMonthlyRev"),c=document.getElementById("kpiLift"),f=document.getElementById("kpiAnnualRev");if(!i||!t||!e)return;const m={ecommerce:{order:85,min:25,max:1e3},b2b:{order:1500,min:300,max:5e3},clinics:{order:250,min:50,max:2e3},realestate:{order:3500,min:500,max:1e4},saas:{order:150,min:30,max:2500}};function v(){const h=parseInt(i.value,10),w=parseFloat(t.value),g=parseInt(e.value,10);a.textContent=Number(h).toLocaleString(),o.textContent=`${w.toFixed(1)}%`,s.textContent=`€${Number(g).toLocaleString()}`;const d=h*(w/100),r=35,u=Math.round(d*(r/100)),y=Math.round(u*g),k=y*12;l.textContent=`+${u.toLocaleString()}`,b.textContent=`+€${y.toLocaleString()}`,c.textContent=`+${r.toFixed(1)}%`,f.textContent=`€${k.toLocaleString()}`}n==null||n.addEventListener("change",()=>{const h=m[n.value];h&&(e.min=h.min,e.max=h.max,e.value=h.order,v())}),i.addEventListener("input",v),t.addEventListener("input",v),e.addEventListener("input",v),v()}function F(){return`
+  `}function N(){const a=document.getElementById("businessSectorSelect"),t=document.getElementById("sliderVisitors"),i=document.getElementById("sliderConversion"),e=document.getElementById("sliderOrder"),n=document.getElementById("valVisitors"),s=document.getElementById("valConversion"),o=document.getElementById("valOrder"),c=document.getElementById("kpiLeads"),u=document.getElementById("kpiMonthlyRev"),p=document.getElementById("kpiLift"),y=document.getElementById("kpiAnnualRev");if(!t||!i||!e)return;const m={ecommerce:{order:85,min:25,max:1e3},b2b:{order:1500,min:300,max:5e3},clinics:{order:250,min:50,max:2e3},realestate:{order:3500,min:500,max:1e4},saas:{order:150,min:30,max:2500}};function d(){const h=parseInt(t.value,10),b=parseFloat(i.value),w=parseInt(e.value,10);n.textContent=Number(h).toLocaleString(),s.textContent=`${b.toFixed(1)}%`,o.textContent=`€${Number(w).toLocaleString()}`;const l=h*(b/100),r=35,v=Math.round(l*(r/100)),k=Math.round(v*w),f=k*12;c.textContent=`+${v.toLocaleString()}`,u.textContent=`+€${k.toLocaleString()}`,p.textContent=`+${r.toFixed(1)}%`,y.textContent=`€${f.toLocaleString()}`}a==null||a.addEventListener("change",()=>{const h=m[a.value];h&&(e.min=h.min,e.max=h.max,e.value=h.order,d())}),t.addEventListener("input",d),i.addEventListener("input",d),e.addEventListener("input",d),d()}const j=[{id:"faq-1",question:"What services does Vuvuzela DMF offer?",answer:"Vuvuzela DMF delivers end-to-end performance digital marketing: paid advertising across Meta (Facebook & Instagram), Google Search, YouTube, and TikTok; bespoke high-converting web engineering & conversion rate optimization (CRO); technical and local SEO dominance; 24/7 automated speed-to-lead triage (WhatsApp & CRM integrations); and multi-touch revenue attribution."},{id:"faq-2",question:"How quickly do we see measurable results and pipeline growth?",answer:"Paid advertising campaigns on Meta and Google typically start generating qualified leads within the first 7 to 14 days of launch. Bespoke web engineering and CRO funnels are launched within 2 to 4 weeks, while organic technical SEO compounding begins demonstrating strong ranking acceleration within 60 to 90 days."},{id:"faq-3",question:"How does Vuvuzela DMF guarantee return on ad spend (ROAS)?",answer:"Unlike traditional agencies that report on vanity clicks and impressions, our media campaigns are held strictly accountable to closed-revenue and qualified inquiry KPIs. We implement rigorous conversion API tracking, real-time lead validation, and continuous high-velocity creative testing, maintaining an average blended client ROAS of 4.2x."},{id:"faq-4",question:"What platforms and web development stacks do you build on?",answer:"We engineer custom, blazing-fast web platforms using modern web standards: high-performance JavaScript (Vite, Next.js), Shopify, WordPress/WooCommerce, Webflow, and custom headful/headless web architectures. Every build is rigorously engineered for 99+ Google Lighthouse scores, sub-second load times, and psychological CRO conversion paths."},{id:"faq-5",question:"Does Vuvuzela DMF provide ongoing support after launch?",answer:"Yes. We operate long-term growth partnerships with structured retainers covering proactive conversion optimization, weekly performance dashboards, new ad creative iteration, platform security updates, technical monitoring, and priority direct WhatsApp support."},{id:"faq-6",question:"How much does a partnership with Vuvuzela cost?",answer:"Our dedicated growth retainers range between €3,500 and €8,500/month depending on ad spend velocity, market competition, and development requirements. We provide detailed, fixed-price proposals after an initial discovery session so you have absolute transparency before any campaign begins."}];function Y(){const a=`
+    <svg class="icon-plus" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="5" x2="12" y2="19"/>
+      <line x1="5" y1="12" x2="19" y2="12"/>
+    </svg>
+  `,t=`
+    <svg class="icon-minus" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="5" y1="12" x2="19" y2="12"/>
+    </svg>
+  `;return`
+    <section class="section-pad faq-section-container" id="faq">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header-center">
+          <div class="pill-badge">
+            <span>Got Questions? We Have Answers</span>
+          </div>
+          <h2 class="section-title">
+            Frequently Asked Questions
+          </h2>
+          <p class="section-subtitle">
+            Everything you need to know about our growth architecture, engineering standards, campaign pricing, and onboarding process.
+          </p>
+        </div>
+
+        <!-- Sniro-Inspired Accordion Wrapper -->
+        <div class="faq-wrapper" id="faqAccordion">
+          ${j.map((i,e)=>{const n=e===0;return`
+              <div class="faq-item ${n?"open":""}" data-faq-id="${i.id}">
+                <button type="button" class="faq-question" aria-expanded="${n?"true":"false"}" aria-controls="${i.id}-answer" id="${i.id}-question">
+                  <span class="faq-question-text">${i.question}</span>
+                  <div class="faq-toggle" aria-hidden="true">
+                    ${n?t:a}
+                  </div>
+                </button>
+                <div class="faq-answer" id="${i.id}-answer" role="region" aria-labelledby="${i.id}-question" style="${n?"max-height: 400px;":"max-height: 0px;"}">
+                  <div class="faq-answer-inner">
+                    <p>${i.answer}</p>
+                  </div>
+                </div>
+              </div>
+            `}).join("")}
+        </div>
+
+        <!-- Help Banner Below FAQ -->
+        <div class="faq-footer-cta">
+          <p class="faq-footer-prompt">Have a question not answered here?</p>
+          <button type="button" class="btn-pill-primary trigger-brief-modal">
+            <span>Ask Our Growth Team</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+  `}function U(){const a=document.getElementById("faqAccordion");if(!a)return;const t=`
+    <svg class="icon-plus" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="12" y1="5" x2="12" y2="19"/>
+      <line x1="5" y1="12" x2="19" y2="12"/>
+    </svg>
+  `,i=`
+    <svg class="icon-minus" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="5" y1="12" x2="19" y2="12"/>
+    </svg>
+  `,e=a.querySelectorAll(".faq-item"),n=a.querySelector(".faq-item.open");if(n){const s=n.querySelector(".faq-answer");s&&(s.style.maxHeight=s.scrollHeight+30+"px")}e.forEach(s=>{const o=s.querySelector(".faq-question"),c=s.querySelector(".faq-answer"),u=s.querySelector(".faq-toggle");o==null||o.addEventListener("click",p=>{if(p.preventDefault(),s.classList.contains("open")){s.classList.remove("open"),o.setAttribute("aria-expanded","false"),c.style.maxHeight="0px",u.innerHTML=t;return}e.forEach(m=>{if(m!==s&&m.classList.contains("open")){m.classList.remove("open");const d=m.querySelector(".faq-question"),h=m.querySelector(".faq-answer"),b=m.querySelector(".faq-toggle");d==null||d.setAttribute("aria-expanded","false"),h&&(h.style.maxHeight="0px"),b&&(b.innerHTML=t)}}),s.classList.add("open"),o.setAttribute("aria-expanded","true"),c.style.maxHeight=c.scrollHeight+30+"px",u.innerHTML=i})})}function Q(){return`
     <section class="cta-banner-section" id="contact">
       <div class="container">
         <div class="cta-glow-card">
@@ -815,7 +940,7 @@
         </div>
       </div>
     </section>
-  `}function V(){return`
+  `}function K(){return`
     <footer class="global-footer">
       <div class="footer-inner-grid">
         <!-- Brand Info -->
@@ -889,4 +1014,4 @@
         <span>Paid Media • Web Engineering • SEO • 24/7 Lead Automation</span>
       </div>
     </footer>
-  `}class z{constructor(i="appRoot"){this.rootContainer=document.getElementById(i),this.transitionOverlay=document.getElementById("pageTransitionOverlay"),this.currentPath=this.normalizePath(window.location.pathname)}normalizePath(i){return"/"}init(){document.addEventListener("click",i=>{const t=i.target.closest("a");if(!t)return;const e=t.getAttribute("href");if(!e||e.startsWith("http")||e.startsWith("mailto:")||e.startsWith("tel:")||t.target==="_blank")return;if(e.startsWith("#")){i.preventDefault(),this.scrollToAnchor(e);return}const a=t.getAttribute("data-route")||e,o=this.normalizePath(a);if(o!==this.currentPath)i.preventDefault(),this.navigateTo(o);else if(e.includes("#")){i.preventDefault();const s=e.substring(e.indexOf("#"));this.scrollToAnchor(s)}}),window.addEventListener("popstate",()=>{this.renderRoute("/",!1)}),this.renderRoute("/",!1),window.location.hash&&setTimeout(()=>{this.scrollToAnchor(window.location.hash)},200)}navigateTo(i){this.isNavigating||(this.isNavigating=!0,this.transitionOverlay&&this.transitionOverlay.classList.add("is-active"),setTimeout(()=>{window.history.pushState({},"","/"),this.renderRoute("/",!0),window.scrollTo(0,0),setTimeout(()=>{this.transitionOverlay&&this.transitionOverlay.classList.remove("is-active"),this.isNavigating=!1},100)},220))}renderRoute(i,t){if(!this.rootContainer)return;let e="";e+=B(),document.title="VUVUZELA DMF — Digital Marketing Agency & Performance Growth Engine",e+=E(),e+=T(),e+=P(),e+=O(),e+=q(),e+=W(),e+=F(),e+=V(),this.rootContainer.innerHTML=e,I(),L(),R(),D(),G()}scrollToAnchor(i){const t=document.querySelector(i);if(t){const a=t.getBoundingClientRect().top+window.pageYOffset;window.scrollTo({top:Math.max(0,a-90),behavior:"smooth"})}}}document.addEventListener("DOMContentLoaded",()=>{x("auroraCanvas");const n=document.getElementById("modalMount");n&&(n.innerHTML=S(),M());const i=document.getElementById("whatsappMount");i&&(i.innerHTML=A()),new z("appRoot").init()});
+  `}class _{constructor(t="appRoot"){this.rootContainer=document.getElementById(t),this.transitionOverlay=document.getElementById("pageTransitionOverlay"),this.currentPath=this.normalizePath(window.location.pathname)}normalizePath(t){return"/"}init(){document.addEventListener("click",t=>{const i=t.target.closest("a");if(!i)return;const e=i.getAttribute("href");if(!e||e.startsWith("http")||e.startsWith("mailto:")||e.startsWith("tel:")||i.target==="_blank")return;if(e.startsWith("#")){t.preventDefault(),this.scrollToAnchor(e);return}const n=i.getAttribute("data-route")||e,s=this.normalizePath(n);if(s!==this.currentPath)t.preventDefault(),this.navigateTo(s);else if(e.includes("#")){t.preventDefault();const o=e.substring(e.indexOf("#"));this.scrollToAnchor(o)}}),window.addEventListener("popstate",()=>{this.renderRoute("/",!1)}),this.renderRoute("/",!1),window.location.hash&&setTimeout(()=>{this.scrollToAnchor(window.location.hash)},200)}navigateTo(t){this.isNavigating||(this.isNavigating=!0,this.transitionOverlay&&this.transitionOverlay.classList.add("is-active"),setTimeout(()=>{window.history.pushState({},"","/"),this.renderRoute("/",!0),window.scrollTo(0,0),setTimeout(()=>{this.transitionOverlay&&this.transitionOverlay.classList.remove("is-active"),this.isNavigating=!1},100)},220))}renderRoute(t,i){if(!this.rootContainer)return;let e="";e+=P(),document.title="VUVUZELA DMF — Digital Marketing Agency & Performance Growth Engine",e+=O(),e+=W(),e+=F(),e+=H(),e+=V(),e+=$(),e+=Y(),e+=Q(),e+=K(),this.rootContainer.innerHTML=e,R(),D(),G(),z(),N(),U()}scrollToAnchor(t){const i=document.querySelector(t);if(i){const n=i.getBoundingClientRect().top+window.pageYOffset;window.scrollTo({top:Math.max(0,n-90),behavior:"smooth"})}}}document.addEventListener("DOMContentLoaded",()=>{L(),M("auroraCanvas");const a=document.getElementById("modalMount");a&&(a.innerHTML=B(),T());const t=document.getElementById("whatsappMount");t&&(t.innerHTML=E()),new _("appRoot").init()});

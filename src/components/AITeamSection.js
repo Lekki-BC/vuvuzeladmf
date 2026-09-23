@@ -132,7 +132,7 @@ export function renderAITeamSection() {
               ${data.badge}
             </div>
 
-            <h3 style="font-size: 2rem; font-weight: 800; color: #ffffff; line-height: 1.25;">
+            <h3 style="font-size: 2rem; font-weight: 800; color: var(--text-primary); line-height: 1.25;">
               This is how your marketing turns traffic into paying clients.
             </h3>
 

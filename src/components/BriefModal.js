@@ -11,7 +11,7 @@ export function renderBriefModal() {
           <span>Zero-Obligation Growth Diagnostic</span>
         </div>
 
-        <h3 id="modalTitle" style="font-size: 1.65rem; font-weight: 800; color: #ffffff; line-height: 1.25;">
+        <h3 id="modalTitle" style="font-size: 1.65rem; font-weight: 800; color: var(--text-primary); line-height: 1.25;">
           Claim Your Free Digital Marketing &amp; Growth Audit
         </h3>
         <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.5rem; line-height: 1.5;">
@@ -36,7 +36,7 @@ export function renderBriefModal() {
 
           <div class="form-group">
             <label for="inputSector">Primary Industry</label>
-            <select id="inputSector" class="calc-type-select" style="background: rgba(255,255,255,0.06); width: 100%;">
+            <select id="inputSector" class="calc-type-select" style="width: 100%;">
               <option value="ecommerce" selected>E-Commerce & DTC Brand</option>
               <option value="b2b">B2B & Professional Services</option>
               <option value="clinics">Private Healthcare & Clinic</option>
@@ -48,7 +48,7 @@ export function renderBriefModal() {
 
           <div class="form-group">
             <label for="inputGrowthGoal">Primary Growth Objective</label>
-            <select id="inputGrowthGoal" class="calc-type-select" style="background: rgba(255,255,255,0.06); width: 100%;">
+            <select id="inputGrowthGoal" class="calc-type-select" style="width: 100%;">
               <option value="paid-media">Scale Paid Ads & Maximize ROAS (Meta & Google)</option>
               <option value="web-cro">Rebuild High-Converting Website & Sales Funnel</option>
               <option value="seo">Dominate Google Search (Technical & Local SEO)</option>
@@ -71,7 +71,7 @@ export function renderBriefModal() {
               <polyline points="20 6 9 17 4 12"/>
             </svg>
           </div>
-          <h4 style="font-size: 1.4rem; font-weight: 700; color: #ffffff; margin-bottom: 0.5rem;">Audit Request Confirmed!</h4>
+          <h4 style="font-size: 1.4rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Audit Request Confirmed!</h4>
           <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5;">
             Our solutions engineering team will prepare your custom conversational prototype and contact you within 15 minutes.
           </p>

@@ -7,9 +7,13 @@ import { initAuroraBg } from './components/AuroraBg.js';
 import { renderBriefModal, initBriefModal } from './components/BriefModal.js';
 import { renderWhatsAppWidget } from './components/WhatsAppWidget.js';
 import { AppRouter } from './components/Router.js';
+import { initTheme } from './scripts/theme.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Initialize Aurora ambient canvas background
+  // 1. Initialize Light / Dark theme system (default: light)
+  initTheme();
+
+  // 2. Initialize Aurora ambient canvas background
   initAuroraBg('auroraCanvas');
 
   // 2. Render and initialize Brief / Demo Modal

@@ -10,6 +10,7 @@ import { renderFeaturesSection, initFeaturesSection } from './FeaturesSection.js
 import { renderAITeamSection, initAITeamSection } from './AITeamSection.js';
 import { renderTestimonialsSection } from './TestimonialsSection.js';
 import { renderROICalculatorSection, initROICalculatorSection } from './ROICalculatorSection.js';
+import { renderFAQSection, initFAQSection } from './FAQSection.js';
 import { renderCTASection } from './CTASection.js';
 import { renderFooterSection } from './FooterSection.js';
 
@@ -118,6 +119,7 @@ export class AppRouter {
     pageHtml += renderAITeamSection();
     pageHtml += renderTestimonialsSection();
     pageHtml += renderROICalculatorSection();
+    pageHtml += renderFAQSection();
     pageHtml += renderCTASection();
     pageHtml += renderFooterSection();
 
@@ -129,6 +131,7 @@ export class AppRouter {
     initFeaturesSection();
     initAITeamSection();
     initROICalculatorSection();
+    initFAQSection();
   }
 
   scrollToAnchor(hash) {

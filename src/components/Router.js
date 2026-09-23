@@ -112,7 +112,7 @@ export class AppRouter {
     pageHtml += renderGlassmorphismNav('/');
 
     // Render Digital Marketing Agency Page
-    document.title = 'VUVUZELA DMF — Digital Marketing Agency & Performance Growth Engine';
+    document.title = 'Vuvuzela DMF — Performance Digital Marketing Agency & Web Engineering';
     pageHtml += renderHeroSection();
     pageHtml += renderProblemSolutionSection();
     pageHtml += renderFeaturesSection();

@@ -1,0 +1,10 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow build and internal directories if exposed
+Disallow: /dist/
+Disallow: /src/
+
+# Sitemap location
+Sitemap: https://vuvuzeladmf.com/sitemap.xml

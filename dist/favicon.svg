@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="vuvuGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="50%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="vuvuAccent" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+  </defs>
+  <!-- Background Rounded Shield -->
+  <rect width="64" height="64" rx="16" fill="#0f172a" />
+  
+  <!-- Dynamic Geometric 'V' Growth Horn Motif -->
+  <path d="M16 16 L27 46 C28 48.5 31 49.5 33 47.5 L48 16" stroke="url(#vuvuGrad)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Inner Dynamic Energy Spark -->
+  <polygon points="32,24 35,32 43,33 37,38 39,46 32,41 25,46 27,38 21,33 29,32" fill="url(#vuvuAccent)" opacity="0.95" />
+</svg>

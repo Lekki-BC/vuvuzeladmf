@@ -35,10 +35,12 @@ export function renderBriefModal() {
           </div>
 
           <div class="form-group">
-            <label for="inputSector">Primary Industry</label>
+            <label for="inputSector">Primary Industry / Sector</label>
             <select id="inputSector" class="calc-type-select" style="width: 100%;">
               <option value="ecommerce" selected>E-Commerce & DTC Brand</option>
               <option value="b2b">B2B & Professional Services</option>
+              <option value="politics">Political & Civic Organization (GOTV)</option>
+              <option value="executive">Private Individual / Executive PR</option>
               <option value="clinics">Private Healthcare & Clinic</option>
               <option value="realestate">Real Estate & Property</option>
               <option value="saas">SaaS & Technology</option>
@@ -47,13 +49,17 @@ export function renderBriefModal() {
           </div>
 
           <div class="form-group">
-            <label for="inputGrowthGoal">Primary Growth Objective</label>
+            <label for="inputGrowthGoal">Primary Growth Objective / Needed Service</label>
             <select id="inputGrowthGoal" class="calc-type-select" style="width: 100%;">
-              <option value="paid-media">Scale Paid Ads & Maximize ROAS (Meta & Google)</option>
-              <option value="web-cro">Rebuild High-Converting Website & Sales Funnel</option>
-              <option value="seo">Dominate Google Search (Technical & Local SEO)</option>
-              <option value="automation">Automate 24/7 WhatsApp & Lead Qualification</option>
               <option value="full-funnel" selected>Full-Funnel Digital Marketing Transformation</option>
+              <option value="paid-media">PPC & Performance Paid Ads (Meta & Google)</option>
+              <option value="web-ecom">Websites & E-Commerce with Built-in CTA Funnels</option>
+              <option value="mobile-apps">Mobile Application Development (iOS & Android)</option>
+              <option value="video-content">Online Video & Lifecycle Content Marketing</option>
+              <option value="reputation-pr">Online Reputation Management (ORM) & Digital PR</option>
+              <option value="gotv-campaign">Strategic Digital Campaign & GOTV Mobilization</option>
+              <option value="brand-identity">Brand Identity & Eye-Catching Logos</option>
+              <option value="smm">Social Media Marketing & Brand Awareness</option>
             </select>
           </div>
 

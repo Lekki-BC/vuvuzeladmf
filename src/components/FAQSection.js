@@ -7,39 +7,39 @@
 export const FAQ_DATA = [
   {
     id: 'faq-1',
-    question: 'What services does Vuvuzela DMF offer?',
+    question: 'What are the 9 core services offered by Vuvuzela Digital Marketing Factory Inc.?',
     answer:
-      'Vuvuzela DMF delivers end-to-end performance digital marketing: paid advertising across Meta (Facebook & Instagram), Google Search, YouTube, and TikTok; bespoke high-converting web engineering & conversion rate optimization (CRO); technical and local SEO dominance; 24/7 automated speed-to-lead triage (WhatsApp & CRM integrations); and multi-touch revenue attribution.'
+      'We deliver 9 core capabilities: 1) Eye-catching Logos & Brand Identity; 2) Everyday Websites & E-Commerce CRO Funnels; 3) Online Video & Lifecycle Content Marketing; 4) PPC (Pay-Per-Click) Google & Meta Ads; 5) Digital PR for Private Individuals; 6) Strategic Social Media Marketing; 7) Online Reputation Management (ORM) & Brand Defense; 8) Mobile Application Development (iOS & Android); and 9) Strategic Digital Campaigns (GOTV & Civic Mobilization).'
   },
   {
     id: 'faq-2',
+    question: 'How do your Strategic Digital Campaigns and GOTV (Get Out To Vote) services work?',
+    answer:
+      'Our political and civic campaign practitioners build a battle-tested framework: we develop optimized campaign websites, deploy targeted online media blitzes across Google and Meta, integrate high-capacity WhatsApp APIs (achieving 98%+ open rates), and establish Constituent Relationship Management systems to build awareness, persuade voters, and mobilize supporters.'
+  },
+  {
+    id: 'faq-3',
+    question: 'What does your Online Reputation Management (ORM) service cover?',
+    answer:
+      'Our ORM framework actively protects brands and high-profile individuals against counterfeit goods, fake product listings, defamatory attacks, and negative review spikes. Using proprietary online redeeming tools, negative search suppression, and proactive sentiment defense, we rehabilitate and safeguard your digital perception.'
+  },
+  {
+    id: 'faq-4',
+    question: 'What technology stacks do you use for Websites and Mobile App Development?',
+    answer:
+      'For web and e-commerce, we engineer custom platforms with Vite, Next.js, Shopify, and WordPress engineered for 99+ Lighthouse scores and psychological CRO funnels. For mobile apps, we develop native, hybrid, and cross-platform solutions for iOS and Android (React Native / Flutter) backed by scheduled test & App Store release management.'
+  },
+  {
+    id: 'faq-5',
     question: 'How quickly do we see measurable results and pipeline growth?',
     answer:
       'Paid advertising campaigns on Meta and Google typically start generating qualified leads within the first 7 to 14 days of launch. Bespoke web engineering and CRO funnels are launched within 2 to 4 weeks, while organic technical SEO compounding begins demonstrating strong ranking acceleration within 60 to 90 days.'
   },
   {
-    id: 'faq-3',
-    question: 'How does Vuvuzela DMF guarantee return on ad spend (ROAS)?',
-    answer:
-      'Unlike traditional agencies that report on vanity clicks and impressions, our media campaigns are held strictly accountable to closed-revenue and qualified inquiry KPIs. We implement rigorous conversion API tracking, real-time lead validation, and continuous high-velocity creative testing, maintaining an average blended client ROAS of 4.2x.'
-  },
-  {
-    id: 'faq-4',
-    question: 'What platforms and web development stacks do you build on?',
-    answer:
-      'We engineer custom, blazing-fast web platforms using modern web standards: high-performance JavaScript (Vite, Next.js), Shopify, WordPress/WooCommerce, Webflow, and custom headful/headless web architectures. Every build is rigorously engineered for 99+ Google Lighthouse scores, sub-second load times, and psychological CRO conversion paths.'
-  },
-  {
-    id: 'faq-5',
-    question: 'Does Vuvuzela DMF provide ongoing support after launch?',
-    answer:
-      'Yes. We operate long-term growth partnerships with structured retainers covering proactive conversion optimization, weekly performance dashboards, new ad creative iteration, platform security updates, technical monitoring, and priority direct WhatsApp support.'
-  },
-  {
     id: 'faq-6',
-    question: 'How much does a partnership with Vuvuzela cost?',
+    question: 'How does Vuvuzela guarantee return on ad spend (ROAS)?',
     answer:
-      'Our dedicated growth retainers range between €3,500 and €8,500/month depending on ad spend velocity, market competition, and development requirements. We provide detailed, fixed-price proposals after an initial discovery session so you have absolute transparency before any campaign begins.'
+      'Unlike traditional agencies that report on vanity clicks and impressions, our media campaigns are held strictly accountable to closed-revenue and qualified inquiry KPIs. We implement conversion API tracking, real-time lead validation, and continuous high-velocity creative testing, maintaining an average blended client ROAS of 4.2x.'
   }
 ];
 

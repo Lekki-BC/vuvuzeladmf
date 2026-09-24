@@ -1,6 +1,10 @@
 /**
  * ROICalculatorSection - Interactive real-time ROI estimation engine
- * with reactive range sliders and dynamic KPI projections
+ * Internal Location-Based Pricing Algorithm:
+ * - Detects live location via IP address, device timezone, and browser geolocation indicators.
+ * - For users in Nigeria: automatically sets currency to Naira (₦ NGN) with Nigerian market benchmarks.
+ * - For users outside Nigeria: automatically sets currency to US Dollars ($ USD) with global market benchmarks.
+ * - 100% automated internal algorithm without requiring manual user toggling.
  */
 
 export function renderROICalculatorSection() {
@@ -16,7 +20,7 @@ export function renderROICalculatorSection() {
             Calculate Your Marketing Revenue Potential
           </h2>
           <p class="section-subtitle">
-            Adjust your monthly traffic, current conversion baseline, and average customer order value to see how Vuvuzela DMF's full-funnel marketing multiplies your pipeline.
+            Adjust your monthly traffic, current conversion baseline, and average customer order value to see how Vuvuzela Digital Marketing Factory Inc. multiplies your pipeline.
           </p>
         </div>
 
@@ -24,17 +28,14 @@ export function renderROICalculatorSection() {
         <div class="roi-layout-grid">
           <!-- Left Sliders Column -->
           <div class="calc-sliders-col">
+
             <!-- Business Type -->
             <div class="calc-field-group">
               <label class="calc-field-header" for="businessSectorSelect">
                 <span>Select Your Business Model</span>
               </label>
               <select class="calc-type-select" id="businessSectorSelect">
-                <option value="ecommerce" selected>E-Commerce & DTC Brands (€85 avg order)</option>
-                <option value="b2b">B2B & Professional Services (€1,500 avg retainer)</option>
-                <option value="clinics">Private Clinics & Health (€250 avg patient)</option>
-                <option value="realestate">Real Estate & Property (€3,500 avg deal)</option>
-                <option value="saas">SaaS & Technology Subscriptions (€150 avg MRR)</option>
+                <!-- Dynamically populated based on internal location algorithm -->
               </select>
             </div>
 
@@ -68,12 +69,12 @@ export function renderROICalculatorSection() {
             <div class="calc-field-group">
               <div class="calc-field-header">
                 <span>Average Deal / Order Value</span>
-                <span class="calc-field-val" id="valOrder">€85</span>
+                <span class="calc-field-val" id="valOrder">$85</span>
               </div>
               <input type="range" class="custom-slider" id="sliderOrder" min="25" max="5000" step="25" value="85" />
               <div style="display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-muted);">
-                <span>€25</span>
-                <span>€5,000</span>
+                <span id="sliderOrderMinLabel">$25</span>
+                <span id="sliderOrderMaxLabel">$5,000</span>
               </div>
             </div>
           </div>
@@ -85,7 +86,7 @@ export function renderROICalculatorSection() {
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                 </svg>
-                <span>Additional Leads / Month</span>
+                <span>Additional Qualified Inquiries / Month</span>
               </div>
               <div class="kpi-value" id="kpiLeads">+70</div>
             </div>
@@ -97,7 +98,7 @@ export function renderROICalculatorSection() {
                 </svg>
                 <span>Additional Monthly Revenue</span>
               </div>
-              <div class="kpi-value" id="kpiMonthlyRev" style="color: var(--accent-green);">+€5,950</div>
+              <div class="kpi-value" id="kpiMonthlyRev" style="color: var(--accent-green);">+$5,950</div>
             </div>
 
             <div class="kpi-row-card">
@@ -115,17 +116,17 @@ export function renderROICalculatorSection() {
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
                 </svg>
-                <span>Response Speed</span>
+                <span>Lead Response Speed</span>
               </div>
-              <div class="kpi-value" style="color: #38bdf8;">80% Faster</div>
+              <div class="kpi-value" style="color: #38bdf8;">&lt; 60s (Instant)</div>
             </div>
 
             <!-- Big Annual Box -->
             <div class="annual-roi-box">
               <div class="annual-roi-label">Projected Annual Revenue Increase</div>
-              <div class="annual-roi-number" id="kpiAnnualRev">€71,400</div>
+              <div class="annual-roi-number" id="kpiAnnualRev">$71,400</div>
               <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">
-                Based on 24/7 sub-second inquiry response benchmarks across our client base.
+                Calculated on automated multi-touch conversion funnels and WhatsApp API speed-to-lead benchmarks.
               </p>
             </div>
           </div>
@@ -133,6 +134,117 @@ export function renderROICalculatorSection() {
       </div>
     </section>
   `;
+}
+
+// Currency configurations with authentic market pricing
+const CURRENCY_CONFIGS = {
+  NGN: {
+    code: 'NGN',
+    symbol: '₦',
+    presets: {
+      ecommerce: {
+        label: 'E-Commerce & DTC Brands (₦85,000 avg order)',
+        order: 85000,
+        min: 10000,
+        max: 500000,
+        step: 5000,
+      },
+      b2b: {
+        label: 'B2B & Professional Services (₦1,500,000 avg retainer)',
+        order: 1500000,
+        min: 250000,
+        max: 10000000,
+        step: 50000,
+      },
+      clinics: {
+        label: 'Private Healthcare & Clinics (₦250,000 avg patient)',
+        order: 250000,
+        min: 50000,
+        max: 3000000,
+        step: 25000,
+      },
+      realestate: {
+        label: 'Real Estate & Property (₦5,000,000 avg commission/deal)',
+        order: 5000000,
+        min: 500000,
+        max: 25000000,
+        step: 100000,
+      },
+      saas: {
+        label: 'SaaS & Tech Subscriptions (₦150,000 avg MRR)',
+        order: 150000,
+        min: 25000,
+        max: 2000000,
+        step: 10000,
+      },
+    },
+  },
+  USD: {
+    code: 'USD',
+    symbol: '$',
+    presets: {
+      ecommerce: {
+        label: 'E-Commerce & DTC Brands ($85 avg order)',
+        order: 85,
+        min: 25,
+        max: 1000,
+        step: 5,
+      },
+      b2b: {
+        label: 'B2B & Professional Services ($1,500 avg retainer)',
+        order: 1500,
+        min: 300,
+        max: 5000,
+        step: 50,
+      },
+      clinics: {
+        label: 'Private Healthcare & Clinics ($250 avg patient)',
+        order: 250,
+        min: 50,
+        max: 2000,
+        step: 25,
+      },
+      realestate: {
+        label: 'Real Estate & Property ($3,500 avg deal)',
+        order: 3500,
+        min: 500,
+        max: 10000,
+        step: 100,
+      },
+      saas: {
+        label: 'SaaS & Tech Subscriptions ($150 avg MRR)',
+        order: 150,
+        min: 30,
+        max: 2500,
+        step: 25,
+      },
+    },
+  },
+};
+
+/**
+ * Fast Client-Side Geo Detection Algorithm:
+ * 1. Checks device timezone (Africa/Lagos)
+ * 2. Checks browser locale (en-NG, yo-NG, ig-NG, ha-NG)
+ * 3. Fallback to USD
+ */
+function detectHeuristicCurrency() {
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+    if (tz.toLowerCase().includes('lagos') || tz.toLowerCase().includes('nigeria')) {
+      return 'NGN';
+    }
+
+    const languages = navigator.languages || [navigator.language || ''];
+    const isNgLocale = languages.some((l) => l && l.toLowerCase().includes('-ng'));
+    if (isNgLocale) {
+      return 'NGN';
+    }
+  } catch (e) {
+    // Silent fallback
+  }
+
+  return 'USD';
 }
 
 export function initROICalculatorSection() {
@@ -144,53 +256,85 @@ export function initROICalculatorSection() {
   const valVisitors = document.getElementById('valVisitors');
   const valConversion = document.getElementById('valConversion');
   const valOrder = document.getElementById('valOrder');
+  const sliderOrderMinLabel = document.getElementById('sliderOrderMinLabel');
+  const sliderOrderMaxLabel = document.getElementById('sliderOrderMaxLabel');
 
   const kpiLeads = document.getElementById('kpiLeads');
   const kpiMonthlyRev = document.getElementById('kpiMonthlyRev');
   const kpiLift = document.getElementById('kpiLift');
   const kpiAnnualRev = document.getElementById('kpiAnnualRev');
 
-  if (!sliderVisitors || !sliderConversion || !sliderOrder) return;
+  if (!sliderVisitors || !sliderConversion || !sliderOrder || !selectSector) return;
 
-  const sectorPresets = {
-    ecommerce: { order: 85, min: 25, max: 1000 },
-    b2b: { order: 1500, min: 300, max: 5000 },
-    clinics: { order: 250, min: 50, max: 2000 },
-    realestate: { order: 3500, min: 500, max: 10000 },
-    saas: { order: 150, min: 30, max: 2500 },
-  };
+  // Active currency resolved internally
+  let activeCurrency = detectHeuristicCurrency();
+
+  // Populate sector dropdown based on active currency
+  function populateSectorDropdown(selectedKey = 'ecommerce') {
+    const conf = CURRENCY_CONFIGS[activeCurrency];
+    selectSector.innerHTML = Object.entries(conf.presets)
+      .map(
+        ([key, data]) => `
+          <option value="${key}" ${key === selectedKey ? 'selected' : ''}>
+            ${data.label}
+          </option>
+        `
+      )
+      .join('');
+  }
+
+  function applyCurrencyState() {
+    const conf = CURRENCY_CONFIGS[activeCurrency];
+    const currentKey = selectSector.value || 'ecommerce';
+    populateSectorDropdown(currentKey);
+
+    const preset = conf.presets[currentKey] || conf.presets.ecommerce;
+    sliderOrder.min = preset.min;
+    sliderOrder.max = preset.max;
+    sliderOrder.step = preset.step;
+    sliderOrder.value = preset.order;
+
+    if (sliderOrderMinLabel) sliderOrderMinLabel.textContent = `${conf.symbol}${Number(preset.min).toLocaleString()}`;
+    if (sliderOrderMaxLabel) sliderOrderMaxLabel.textContent = `${conf.symbol}${Number(preset.max).toLocaleString()}`;
+
+    recalculate();
+  }
 
   function recalculate() {
+    const conf = CURRENCY_CONFIGS[activeCurrency];
     const visitors = parseInt(sliderVisitors.value, 10);
     const convRate = parseFloat(sliderConversion.value);
     const orderVal = parseInt(sliderOrder.value, 10);
 
-    // Update labels
+    // Update slider readouts
     valVisitors.textContent = Number(visitors).toLocaleString();
     valConversion.textContent = `${convRate.toFixed(1)}%`;
-    valOrder.textContent = `€${Number(orderVal).toLocaleString()}`;
+    valOrder.textContent = `${conf.symbol}${Number(orderVal).toLocaleString()}`;
 
-    // Calculation: baseline leads vs 35% AI lift
-    const currentMonthlyLeads = (visitors * (convRate / 100));
-    const currentRevenue = currentMonthlyLeads * orderVal;
-
-    const liftPercent = 35.0; // conservative AI response uplift
+    // Calculation logic: 35% conversion funnel lift
+    const currentMonthlyLeads = visitors * (convRate / 100);
+    const liftPercent = 35.0;
     const additionalLeadsVal = Math.round(currentMonthlyLeads * (liftPercent / 100));
     const additionalMonthlyRevenueVal = Math.round(additionalLeadsVal * orderVal);
     const annualRevenueVal = additionalMonthlyRevenueVal * 12;
 
     kpiLeads.textContent = `+${additionalLeadsVal.toLocaleString()}`;
-    kpiMonthlyRev.textContent = `+€${additionalMonthlyRevenueVal.toLocaleString()}`;
+    kpiMonthlyRev.textContent = `+${conf.symbol}${additionalMonthlyRevenueVal.toLocaleString()}`;
     kpiLift.textContent = `+${liftPercent.toFixed(1)}%`;
-    kpiAnnualRev.textContent = `€${annualRevenueVal.toLocaleString()}`;
+    kpiAnnualRev.textContent = `${conf.symbol}${annualRevenueVal.toLocaleString()}`;
   }
 
-  selectSector?.addEventListener('change', () => {
-    const preset = sectorPresets[selectSector.value];
+  // Event Listeners for interactive sliders
+  selectSector.addEventListener('change', () => {
+    const conf = CURRENCY_CONFIGS[activeCurrency];
+    const preset = conf.presets[selectSector.value];
     if (preset) {
       sliderOrder.min = preset.min;
       sliderOrder.max = preset.max;
+      sliderOrder.step = preset.step;
       sliderOrder.value = preset.order;
+      if (sliderOrderMinLabel) sliderOrderMinLabel.textContent = `${conf.symbol}${Number(preset.min).toLocaleString()}`;
+      if (sliderOrderMaxLabel) sliderOrderMaxLabel.textContent = `${conf.symbol}${Number(preset.max).toLocaleString()}`;
       recalculate();
     }
   });
@@ -199,5 +343,41 @@ export function initROICalculatorSection() {
   sliderConversion.addEventListener('input', recalculate);
   sliderOrder.addEventListener('input', recalculate);
 
-  recalculate();
+  // Initialize UI immediately with fast heuristic
+  applyCurrencyState();
+
+  // Internal live IP location check:
+  // Verifies country via fast IP lookup and switches currency seamlessly if needed
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 2500);
+
+  fetch('https://api.country.is/', { signal: controller.signal })
+    .then((res) => res.json())
+    .then((data) => {
+      clearTimeout(timeoutId);
+      if (data && data.country) {
+        const ipCurrency = data.country === 'NG' ? 'NGN' : 'USD';
+        if (ipCurrency !== activeCurrency) {
+          activeCurrency = ipCurrency;
+          applyCurrencyState();
+        }
+      }
+    })
+    .catch(() => {
+      // Fallback IP provider
+      fetch('https://ipapi.co/json/', { signal: controller.signal })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data && data.country_code) {
+            const ipCurrency = data.country_code === 'NG' ? 'NGN' : 'USD';
+            if (ipCurrency !== activeCurrency) {
+              activeCurrency = ipCurrency;
+              applyCurrencyState();
+            }
+          }
+        })
+        .catch(() => {
+          // Silent fallback to timezone / locale heuristic already active
+        });
+    });
 }

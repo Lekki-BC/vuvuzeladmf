@@ -1,6 +1,6 @@
 /**
- * FeaturesSection - Light-theme contrast section showcasing the 6 core capabilities
- * with live animated micro-interactions (chat simulator, calendar booking, phone pulses).
+ * FeaturesSection - 9 Core Capabilities of Vuvuzela Digital Marketing Factory Inc.
+ * Featuring category filtering, interactive micro-previews, and high-impact visual design.
  */
 export function renderFeaturesSection() {
   return `
@@ -11,143 +11,234 @@ export function renderFeaturesSection() {
         <!-- Section Header -->
         <div class="section-header-center">
           <div class="pill-badge">
-            <span>What We Deliver</span>
+            <span>Our 9 Core Capabilities</span>
           </div>
           <h2 class="section-title">
-            Full-Service Digital Marketing Engineered for Revenue
+            Full-Spectrum Digital Marketing &amp; Platform Engineering
           </h2>
           <p class="section-subtitle">
-            An integrated growth engine unifying high-ROI paid media, custom web development, technical SEO, and automated lead capture pipelines.
+            Without much ado, here is our full suite of bespoke services engineered to expand your reach, elevate brand credibility, and scale predictable revenue.
           </p>
         </div>
 
-        <!-- 6 Interactive Feature Cards -->
-        <div class="features-interactive-grid">
-          <!-- Card 1: Performance Paid Advertising -->
-          <div class="feature-tile">
-            <div class="feature-tile-preview" style="justify-content: space-evenly;">
-              <div class="chips-row">
-                <span class="chip-tag" style="background:#dbeafe; color:#1e40af; border-color:#93c5fd;">High Intent: +42%</span>
-                <span class="chip-tag">Meta Ads (FB/IG)</span>
-                <span class="chip-tag" style="background:#fef3c7; color:#92400e; border-color:#fcd34d;">Google PMax</span>
+        <!-- Category Filter Tabs -->
+        <div class="industry-tabs-wrap" id="servicesFilterTabs" style="margin-bottom: 2.5rem; justify-content: center;">
+          <button type="button" class="ind-tab-btn active" data-filter="all">All 9 Services</button>
+          <button type="button" class="ind-tab-btn" data-filter="media">Paid Media &amp; Content</button>
+          <button type="button" class="ind-tab-btn" data-filter="engineering">Web &amp; Mobile Apps</button>
+          <button type="button" class="ind-tab-btn" data-filter="strategic">PR, ORM &amp; Campaigns</button>
+        </div>
+
+        <!-- 9 Interactive Feature Cards Grid -->
+        <div class="features-interactive-grid" id="servicesGrid">
+
+          <!-- 1. Eye-Catching Logos & Brand Identity -->
+          <div class="feature-tile" data-category="engineering">
+            <div class="feature-tile-preview" style="justify-content: center; align-items: center; gap: 0.75rem;">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <div style="width: 44px; height: 44px; border-radius: 12px; background: linear-gradient(135deg, #4f46e5, #06b6d4); display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-size: 1.2rem; box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);">
+                  V
+                </div>
+                <div style="display: flex; flex-direction: column;">
+                  <span style="font-size: 0.85rem; font-weight: 800; color: #0f172a; letter-spacing: 0.05em;">BRAND IDENTITY</span>
+                  <span style="font-size: 0.72rem; color: #64748b;">Vector • Letterheads • Guidelines</span>
+                </div>
               </div>
-              <div class="chips-row">
-                <span class="chip-tag">Omnichannel Retargeting</span>
-                <span class="chip-tag" style="background:#dcfce7; color:#166534; border-color:#86efac; font-weight: 800;">Avg ROAS: 4.2x</span>
+              <div class="chips-row" style="margin-top: 4px;">
+                <span class="chip-tag" style="background:#f1f5f9; color:#334155; font-size: 0.7rem;">Vector SVGs</span>
+                <span class="chip-tag" style="background:#e0e7ff; color:#3730a3; font-size: 0.7rem;">Print Collateral</span>
+                <span class="chip-tag" style="background:#fef3c7; color:#92400e; font-size: 0.7rem;">Social Assets</span>
               </div>
             </div>
-            <h3 class="feature-tile-title">Performance Paid Advertising</h3>
+            <h3 class="feature-tile-title">1. Eye-Catching Logos &amp; Brand Identity</h3>
             <p class="feature-tile-desc">
-              Data-driven ad campaigns across Meta, Google Search, YouTube, and TikTok engineered strictly for high return on ad spend (ROAS) and scalable customer acquisition.
+              Memorable visual identities and bespoke logos tailored for your corporate letterheads, websites, packaging, and digital collateral that anchor instant brand trust.
             </p>
           </div>
 
-          <!-- Card 2: High-Converting Web Development -->
-          <div class="feature-tile">
+          <!-- 2. Everyday & E-Commerce Websites (CRO, CTR, SEO) -->
+          <div class="feature-tile" data-category="engineering">
             <div class="feature-tile-preview" style="gap: 8px;">
               <div style="display: flex; justify-content: space-between; font-size: 0.78rem; font-weight: 700; color: #1e293b;">
-                <span>Conversion Rate Lift</span>
-                <span style="color: #10b981;">+64.2%</span>
+                <span>Agile CRO &amp; CTR Funnel</span>
+                <span style="color: #10b981;">+64.2% Conversion Lift</span>
               </div>
               <div style="width: 100%; height: 8px; background: #e2e8f0; border-radius: 4px; overflow: hidden;">
                 <div style="width: 82%; height: 100%; background: linear-gradient(90deg, #3b82f6, #10b981); border-radius: 4px;"></div>
               </div>
               <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #64748b; margin-top: 4px;">
                 <span>Speed: 0.6s (Lighthouse 99)</span>
-                <span>CRO Architecture</span>
+                <span>Organic SEO Architecture</span>
               </div>
             </div>
-            <h3 class="feature-tile-title">High-Converting Web Engineering</h3>
+            <h3 class="feature-tile-title">2. Websites &amp; E-Commerce Funnels</h3>
             <p class="feature-tile-desc">
-              Bespoke websites and sales funnels crafted with elite visual design, psychological copywriting, and sub-second load speeds that turn cold visitors into paying buyers.
+              High-performance everyday corporate websites and e-commerce stores with built-in CTA funnels, high Click-Through Rates (CTR), agile Conversion Rate Optimization (CRO), and robust SEO.
             </p>
           </div>
 
-          <!-- Card 3: 24/7 Smart Speed-to-Lead Automation -->
-          <div class="feature-tile">
-            <div class="feature-tile-preview" id="featureChatPreview">
-              <div style="position: absolute; top: 10px; right: 12px; display: flex; align-items: center; gap: 4px;">
-                <span style="font-size: 0.72rem; color: #10b981; font-weight: 700;">&lt; 60s RESPONSE</span>
+          <!-- 3. Online Video & Content Marketing Practitioners -->
+          <div class="feature-tile" data-category="media">
+            <div class="feature-tile-preview" style="justify-content: center; gap: 8px;">
+              <div style="display: flex; align-items: center; justify-content: space-between; background: rgba(0,0,0,0.04); padding: 6px 10px; border-radius: 8px;">
+                <div style="display: flex; align-items: center; gap: 6px;">
+                  <span style="width: 8px; height: 8px; border-radius: 50%; background: #ef4444; display: inline-block;"></span>
+                  <span style="font-size: 0.75rem; font-weight: 700; color: #1e293b;">Lifecycle Video Studio</span>
+                </div>
+                <span style="font-size: 0.7rem; font-weight: 700; background: #fee2e2; color: #991b1b; padding: 2px 6px; border-radius: 4px;">4K Short-Form</span>
               </div>
-              <div class="chat-sim-bubble chat-sim-bot" id="chatSimBubbleBot">
-                Good evening! How may I assist you?
-              </div>
-              <div class="chat-sim-bubble chat-sim-user" id="chatSimBubbleUser">
-                I'd like to check pricing and availability
-              </div>
-              <div class="typing-pill" id="chatSimTyping" style="display: none;">
-                <span class="typing-dot"></span>
-                <span class="typing-dot"></span>
-                <span class="typing-dot"></span>
+              <div class="chips-row" style="gap: 4px;">
+                <span class="chip-tag" style="font-size: 0.68rem;">YouTube</span>
+                <span class="chip-tag" style="font-size: 0.68rem;">TikTok</span>
+                <span class="chip-tag" style="font-size: 0.68rem;">Instagram Reels</span>
+                <span class="chip-tag" style="font-size: 0.68rem;">Meta / Google</span>
               </div>
             </div>
-            <h3 class="feature-tile-title">Smart Speed-to-Lead Automation</h3>
+            <h3 class="feature-tile-title">3. Online Video &amp; Content Marketing</h3>
             <p class="feature-tile-desc">
-              Never let paid ad leads slip away. Our automated conversational workflows engage inbound inquiries within seconds across your website and WhatsApp, qualifying buyers 24/7.
+              Your preferred lifecycle content managers. Professional in-house scriptwriters craft your message, while our video production team breathes life into high-retention video assets for YouTube, TikTok, Instagram, Facebook, and Google Ads.
             </p>
           </div>
 
-          <!-- Card 4: Automated Pipeline & Calendar Booking -->
-          <div class="feature-tile">
-            <div class="feature-tile-preview">
-              <div class="cal-grid" id="interactiveCalGrid">
-                <div>Mo</div><div>Tu</div><div>We</div><div>Th</div><div>Fr</div><div>Sa</div><div>Su</div>
-                <div class="cal-day">14</div>
-                <div class="cal-day active-day" data-day="15">15</div>
-                <div class="cal-day" data-day="16">16</div>
-                <div class="cal-day" data-day="17">17</div>
-                <div class="cal-day" data-day="18">18</div>
-                <div class="cal-day" data-day="19">19</div>
-                <div class="cal-day" data-day="20">20</div>
-              </div>
-              <div class="cal-status-pill" id="calStatusMessage">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="20 6 9 17 4 12"/>
-                </svg>
-                <span>Slot confirmed for the 15th at 2:00 PM</span>
-              </div>
-            </div>
-            <h3 class="feature-tile-title">Automated Pipeline & Booking</h3>
-            <p class="feature-tile-desc">
-              Frictionless booking funnels synchronize with team calendars, eliminate back-and-forth emails, and send automated SMS and WhatsApp confirmation reminders.
-            </p>
-          </div>
-
-          <!-- Card 5: Technical & Local SEO Dominance -->
-          <div class="feature-tile">
+          <!-- 4. PPC (Pay-Per-Click) Adverts & Scalable Acquisition -->
+          <div class="feature-tile" data-category="media">
             <div class="feature-tile-preview" style="justify-content: space-evenly;">
               <div class="chips-row">
-                <span class="chip-tag" style="background:#e0e7ff; color:#3730a3; border-color:#c7d2fe; font-weight:700;">Google Page 1</span>
-                <span class="chip-tag">Local Maps 3-Pack</span>
+                <span class="chip-tag" style="background:#dbeafe; color:#1e40af; border-color:#93c5fd;">High Intent: +42%</span>
+                <span class="chip-tag">Google Ads Search</span>
+                <span class="chip-tag" style="background:#fef3c7; color:#92400e; border-color:#fcd34d;">Meta PMax</span>
               </div>
               <div class="chips-row">
-                <span class="chip-tag" style="background:#dcfce7; color:#166534; border-color:#86efac;">Organic Clicks: +210%</span>
-                <span class="chip-tag">Technical Audit: 99/100</span>
+                <span class="chip-tag">Budget-Paced Scaling</span>
+                <span class="chip-tag" style="background:#dcfce7; color:#166534; border-color:#86efac; font-weight: 800;">Avg ROAS: 4.2x</span>
               </div>
             </div>
-            <h3 class="feature-tile-title">Technical SEO & Search Dominance</h3>
+            <h3 class="feature-tile-title">4. PPC (Pay-Per-Click) Advertising</h3>
             <p class="feature-tile-desc">
-              Capture compounding organic buyer demand. We engineer technical SEO architectures, authoritative content strategies, and local search dominance that rank you at the top of Google.
+              Data-backed ad campaigns tailored to your budget velocity and urgency. We advertise your goods and services across Google Ads and Meta Ads with the necessary CTA funnel to help your brand scale with absolute ease.
             </p>
           </div>
 
-          <!-- Card 6: Multi-Platform CRM & Revenue Attribution -->
-          <div class="feature-tile">
-            <div class="feature-tile-preview" style="justify-content: center;">
-              <div class="chips-row" style="gap: 0.6rem;">
-                <span class="chip-tag" style="font-weight: 700;">WhatsApp API</span>
-                <span class="chip-tag" style="font-weight: 700;">HubSpot</span>
-                <span class="chip-tag" style="font-weight: 700;">Salesforce</span>
-                <span class="chip-tag" style="font-weight: 700;">Meta Pixel</span>
-                <span class="chip-tag" style="font-weight: 700;">Google Ads</span>
-                <span class="chip-tag" style="font-weight: 700;">Zapier</span>
+          <!-- 5. Digital Public Relations (PR) for Private Individuals -->
+          <div class="feature-tile" data-category="strategic">
+            <div class="feature-tile-preview" style="justify-content: center; gap: 8px;">
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <span style="font-size: 0.76rem; font-weight: 800; color: #1e293b;">EXECUTIVE AUTHORITY</span>
+                <span style="font-size: 0.72rem; color: #3b82f6; font-weight: 700; display: inline-flex; align-items: center; gap: 2px;">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                  Verified Press
+                </span>
               </div>
+              <div class="chips-row" style="gap: 4px;">
+                <span class="chip-tag" style="background:#f8fafc; color:#334155; font-size: 0.7rem;">Thought Leadership</span>
+                <span class="chip-tag" style="background:#f0fdf4; color:#166534; font-size: 0.7rem;">Media Syndication</span>
+              </div>
+              <div style="font-size: 0.72rem; color: #64748b;">Top-tier digital placements &amp; personal brand prestige</div>
             </div>
-            <h3 class="feature-tile-title">Omnichannel CRM & Attribution</h3>
+            <h3 class="feature-tile-title">5. Digital PR for Private Individuals</h3>
             <p class="feature-tile-desc">
-              Full transparency over every marketing dollar spent. Seamlessly plugs into your sales stack and CRM with real-time dashboards tracking exact acquisition cost and revenue.
+              Strategic public relations and personal brand engineering for founders, executives, and high-profile individuals seeking authoritative media features, thought leadership syndication, and elevated digital standing.
             </p>
           </div>
+
+          <!-- 6. Social Media Marketing (SMM) & Brand Awareness -->
+          <div class="feature-tile" data-category="media">
+            <div class="feature-tile-preview" style="justify-content: center; gap: 6px;">
+              <div style="display: flex; justify-content: space-between; font-size: 0.76rem; font-weight: 700; color: #1e293b;">
+                <span>Audience Reach &amp; Virality</span>
+                <span style="color: #6366f1;">+248% Engagement</span>
+              </div>
+              <div class="chips-row" style="gap: 4px; margin-top: 4px;">
+                <span class="chip-tag" style="font-size: 0.7rem;">Target Discovery</span>
+                <span class="chip-tag" style="font-size: 0.7rem;">Custom SMM Tools</span>
+                <span class="chip-tag" style="background:#ecfdf5; color:#065f46; font-size: 0.7rem; font-weight: 700;">High ROI</span>
+              </div>
+              <div style="font-size: 0.72rem; color: #64748b; margin-top: 4px;">Proprietary multi-platform scheduling &amp; community nurturing</div>
+            </div>
+            <h3 class="feature-tile-title">6. Social Media Marketing (SMM)</h3>
+            <p class="feature-tile-desc">
+              Harness in-house solutions and custom tools to pinpoint your ideal audience, build undeniable brand awareness, and elevate organic visibility that funnels directly into sustainable ROI.
+            </p>
+          </div>
+
+          <!-- 7. Online Reputation Management (ORM) & Brand Defense -->
+          <div class="feature-tile" data-category="strategic">
+            <div class="feature-tile-preview" style="justify-content: center; gap: 6px;">
+              <div style="display: flex; align-items: center; justify-content: space-between;">
+                <span style="font-size: 0.75rem; font-weight: 800; color: #991b1b; display: inline-flex; align-items: center; gap: 4px;">
+                  <span style="width: 8px; height: 8px; border-radius: 50%; background: #ef4444; display: inline-block;"></span>
+                  DEFENSE SYSTEM
+                </span>
+                <span style="font-size: 0.72rem; color: #166534; font-weight: 700; background: #dcfce7; padding: 2px 6px; border-radius: 4px;">99.4% Sentiment Restored</span>
+              </div>
+              <div style="font-size: 0.74rem; color: #334155; font-weight: 600; margin-top: 4px;">
+                Fake Product &amp; Negative Review Suppression
+              </div>
+              <div class="chips-row" style="gap: 4px;">
+                <span class="chip-tag" style="font-size: 0.7rem;">Search De-indexing</span>
+                <span class="chip-tag" style="font-size: 0.7rem;">Brand Redeeming Tools</span>
+              </div>
+            </div>
+            <h3 class="feature-tile-title">7. Online Reputation Management</h3>
+            <p class="feature-tile-desc">
+              Fake products and negative reviews pop up constantly across the spectrum. We proactively restore and defend online brand perceptions through our proprietary online redeeming and search-suppression tools.
+            </p>
+          </div>
+
+          <!-- 8. Mobile Application Development (iOS & Android) -->
+          <div class="feature-tile" data-category="engineering">
+            <div class="feature-tile-preview" style="justify-content: center; gap: 6px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.76rem; font-weight: 800; color: #1e293b;">NATIVE &amp; CROSS-PLATFORM</span>
+                <span style="font-size: 0.72rem; color: #f59e0b; font-weight: 700;">★ 4.9 App Rating</span>
+              </div>
+              <div class="chips-row" style="gap: 4px; margin-top: 4px;">
+                <span class="chip-tag" style="background:#e0f2fe; color:#0369a1; font-size: 0.7rem; font-weight: 700;">Apple iOS</span>
+                <span class="chip-tag" style="background:#dcfce7; color:#15803d; font-size: 0.7rem; font-weight: 700;">Google Android</span>
+                <span class="chip-tag" style="font-size: 0.7rem;">Flutter / React Native</span>
+              </div>
+              <div style="font-size: 0.72rem; color: #64748b; margin-top: 4px;">Bespoke UI/UX • Scheduled Test &amp; Release Management</div>
+            </div>
+            <h3 class="feature-tile-title">8. Mobile Application Development</h3>
+            <p class="feature-tile-desc">
+              We design and build powerful, user-friendly mobile applications that engage customers and streamline business operations. Delivering native, hybrid, and cross-platform solutions across iOS and Android with scheduled test &amp; release management.
+            </p>
+          </div>
+
+          <!-- 9. Strategic Digital Campaign Practitioners (Political, GOTV & Mobilization) -->
+          <div class="feature-tile" data-category="strategic">
+            <div class="feature-tile-preview" style="justify-content: center; gap: 6px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.76rem; font-weight: 800; color: #1e293b;">GOTV &amp; VOTER MOBILIZATION</span>
+                <span style="font-size: 0.7rem; color: #10b981; font-weight: 700; background: #d1fae5; padding: 2px 6px; border-radius: 4px;">WhatsApp API 98% Open</span>
+              </div>
+              <div class="chips-row" style="gap: 4px; margin-top: 4px;">
+                <span class="chip-tag" style="font-size: 0.7rem;">Constituent CRM</span>
+                <span class="chip-tag" style="font-size: 0.7rem;">Online Media Blitz</span>
+                <span class="chip-tag" style="background:#ede9fe; color:#5b21b6; font-size: 0.7rem; font-weight: 700;">Precision Targeting</span>
+              </div>
+              <div style="font-size: 0.72rem; color: #64748b; margin-top: 4px;">Structured online framework to build awareness, persuade &amp; mobilize</div>
+            </div>
+            <h3 class="feature-tile-title">9. Strategic Digital Campaigns (GOTV)</h3>
+            <p class="feature-tile-desc">
+              Specialized campaign practitioners for your GOTV (Get Out To Vote) strategy, civic mobilization, campaign websites, and Constituent Relationship Management systems. We execute targeted online media blitzes and integrated WhatsApp API multi-channel outreach.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Stop Losing Customers Callout -->
+        <div class="stop-losing-banner" style="margin-top: 3.5rem;">
+          <h3>Ready to Deploy a Winning Digital Strategy?</h3>
+          <p>
+            Whether you need high-converting websites, 4K video content, mobile app development, or a strategic GOTV digital campaign, our factory delivers far beyond expectations.
+          </p>
+          <button type="button" class="btn-pill-primary trigger-brief-modal">
+            <span>Claim Free Growth Audit</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
         </div>
       </div>
     </section>
@@ -155,55 +246,26 @@ export function renderFeaturesSection() {
 }
 
 export function initFeaturesSection() {
-  // 1. Chat simulator cycle
-  const botBubble = document.getElementById('chatSimBubbleBot');
-  const userBubble = document.getElementById('chatSimBubbleUser');
-  const typing = document.getElementById('chatSimTyping');
+  // Category Filter Functionality
+  const filterBtns = document.querySelectorAll('#servicesFilterTabs .ind-tab-btn');
+  const serviceCards = document.querySelectorAll('#servicesGrid .feature-tile');
 
-  if (botBubble && userBubble && typing) {
-    const dialogueLoops = [
-      {
-        bot: 'Good evening! How may I assist you?',
-        user: "I'd like to check pricing and availability",
-      },
-      {
-        bot: 'We have 3 slots open for this Saturday!',
-        user: 'Can I book the 11:00 AM slot?',
-      },
-      {
-        bot: 'Confirmed! A calendar invite has been sent to your email.',
-        user: 'Thank you, that was lightning fast!',
-      },
-    ];
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
 
-    let loopIdx = 0;
-    setInterval(() => {
-      typing.style.display = 'inline-flex';
-      setTimeout(() => {
-        typing.style.display = 'none';
-        loopIdx = (loopIdx + 1) % dialogueLoops.length;
-        botBubble.textContent = dialogueLoops[loopIdx].bot;
-        userBubble.textContent = dialogueLoops[loopIdx].user;
-      }, 900);
-    }, 4500);
-  }
+      const filter = btn.getAttribute('data-filter');
 
-  // 2. Interactive Calendar Day Selector
-  const calGrid = document.getElementById('interactiveCalGrid');
-  const calStatus = document.getElementById('calStatusMessage');
-  if (calGrid && calStatus) {
-    calGrid.querySelectorAll('.cal-day').forEach((day) => {
-      day.addEventListener('click', () => {
-        calGrid.querySelectorAll('.cal-day').forEach((d) => d.classList.remove('active-day'));
-        day.classList.add('active-day');
-        const dayNum = day.getAttribute('data-day') || day.textContent;
-        calStatus.innerHTML = `
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <polyline points="20 6 9 17 4 12"/>
-          </svg>
-          <span>Slot confirmed for the ${dayNum}th at 2:00 PM</span>
-        `;
+      serviceCards.forEach((card) => {
+        const category = card.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
+          card.style.display = 'flex';
+          card.style.animation = 'fadeInUp 0.35s ease forwards';
+        } else {
+          card.style.display = 'none';
+        }
       });
     });
-  }
+  });
 }

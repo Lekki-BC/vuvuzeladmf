@@ -91,6 +91,28 @@ const INDUSTRY_DATA = {
       'Investment Returns': 'Projected rental yields on this development sit between 7.2% and 8.4% annually, with full turnkey tenancy management provided.',
       'Project Brochure': 'The high-resolution architectural plans and specification brochure have been sent to your contact number.'
     }
+  },
+  gotv: {
+    badge: 'Political, Civic & GOTV Campaigns',
+    title: 'Strategic Voter Mobilization & Constituent Engagement',
+    desc: 'Battle-tested online mobilization frameworks, optimized campaign portals, targeted media blitzes, and high-capacity WhatsApp API broadcasting engineered to persuade voters and mobilize communities.',
+    quote: '"Vuvuzela\'s GOTV digital campaign infrastructure reached over 350,000 constituents with a 98% WhatsApp open rate, swinging turnout by +18.4% on election day."',
+    author: '— Hon. K. Adeleke, Campaign Director General',
+    agentName: 'Ayo — Campaign Mobilization Hub',
+    agentPhone: 'Official WhatsApp Mobilization Line Active',
+    prompts: ['Polling Unit Locator', 'Volunteer Sign-up', 'Policy Manifesto', 'WhatsApp Broadcast'],
+    initialMessages: [
+      { sender: 'customer', text: "Hello, where is my designated polling unit for Ward 4 and how can I join the volunteer team?" },
+      { sender: 'ai', text: 'Welcome! Your Ward 4 polling station is Community Hall Center. Would you like the GPS directions dispatched to your phone?' },
+      { sender: 'customer', text: 'Yes, and I would love to sign up for canvassing this weekend.' },
+      { sender: 'ai', text: "Fantastic! You've been registered as an active Ward 4 Field Volunteer. You'll receive our campaign briefing kit and WhatsApp group invite immediately." }
+    ],
+    responses: {
+      'Polling Unit Locator': 'Please reply with your voter registration card number or district name and we will display your exact polling station coordinates.',
+      'Volunteer Sign-up': 'Thank you for standing up for progress! Our field coordinator will connect with you in 10 minutes with your local canvassing schedule.',
+      'Policy Manifesto': 'Our 5-pillar civic agenda (Jobs, Infrastructure, Education, Healthcare, and Transparency) has been sent to your WhatsApp.',
+      'WhatsApp Broadcast': 'Our direct constituent broadcast channel reaches 150,000+ verified supporters instantly with zero spam filters.'
+    }
   }
 };
 
@@ -122,6 +144,7 @@ export function renderAITeamSection() {
           <button type="button" class="ind-tab-btn" data-industry="b2b">B2B & Professional</button>
           <button type="button" class="ind-tab-btn" data-industry="clinics">Clinics & Health</button>
           <button type="button" class="ind-tab-btn" data-industry="realestate">Real Estate & Property</button>
+          <button type="button" class="ind-tab-btn" data-industry="gotv">Civic &amp; GOTV Campaigns</button>
         </div>
 
         <!-- Split Screen Layout: Left Information, Right Interactive Chat Device -->

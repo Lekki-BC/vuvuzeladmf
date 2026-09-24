@@ -15,10 +15,10 @@ export function renderFooterSection() {
             </div>
           </div>
           <p class="footer-brand-desc">
-            Full-Service Digital Marketing Agency & Performance Growth Engine. Engineering high-converting funnels, scalable paid acquisition, and automated revenue pipelines for ambitious businesses worldwide.
+            Vuvuzela Digital Marketing Factory Inc. — Full-Spectrum Digital Marketing &amp; Platform Engineering. Engineering high-converting funnels, scalable paid acquisition, mobile apps, lifecycle video content, digital PR, and strategic campaign infrastructure worldwide.
           </p>
           <div style="font-size: 0.85rem; color: var(--text-muted);">
-            © ${currentYear} Vuvuzela DMF. All rights reserved.
+            © ${currentYear} Vuvuzela Digital Marketing Factory Inc. All rights reserved.
           </div>
         </div>
 
@@ -26,25 +26,28 @@ export function renderFooterSection() {
         <div class="footer-nav-grid">
           <!-- Column 1: Services -->
           <div class="footer-nav-col">
-            <h4>Services</h4>
+            <h4>Our 9 Services</h4>
             <ul class="footer-nav-links">
-              <li><a href="#services">Paid Advertising (Meta & Google)</a></li>
-              <li><a href="#services">High-Converting Web Dev</a></li>
-              <li><a href="#services">Technical & Local SEO</a></li>
-              <li><a href="#services">Speed-to-Lead Automation</a></li>
-              <li><a href="#services">Conversion Rate Optimization</a></li>
+              <li><a href="#services">PPC (Pay-Per-Click) Adverts</a></li>
+              <li><a href="#services">Websites &amp; E-Commerce CRO</a></li>
+              <li><a href="#services">Mobile App Development</a></li>
+              <li><a href="#services">Online Video &amp; Content Marketing</a></li>
+              <li><a href="#services">Digital PR for Individuals</a></li>
+              <li><a href="#services">Online Reputation Management (ORM)</a></li>
+              <li><a href="#services">Strategic GOTV Campaigns</a></li>
             </ul>
           </div>
 
           <!-- Column 2: Industries -->
           <div class="footer-nav-col">
-            <h4>Industries</h4>
+            <h4>Specialized Sectors</h4>
             <ul class="footer-nav-links">
-              <li><a href="#industries">Luxury Real Estate</a></li>
-              <li><a href="#industries">E-Commerce & DTC</a></li>
-              <li><a href="#industries">Private Clinics & Health</a></li>
-              <li><a href="#industries">B2B & Professional</a></li>
-              <li><a href="#industries">High-Ticket Retail</a></li>
+              <li><a href="#industries">Civic &amp; Political Campaigns (GOTV)</a></li>
+              <li><a href="#industries">E-Commerce &amp; High-Growth DTC</a></li>
+              <li><a href="#industries">Private Individuals &amp; PR</a></li>
+              <li><a href="#industries">B2B &amp; Professional Services</a></li>
+              <li><a href="#industries">Private Healthcare &amp; Clinics</a></li>
+              <li><a href="#industries">Luxury Real Estate &amp; Property</a></li>
             </ul>
           </div>
 
@@ -74,8 +77,8 @@ export function renderFooterSection() {
       </div>
 
       <div class="footer-bottom-bar">
-        <span>VUVUZELA DMF — Digital Marketing Agency & Performance Engine</span>
-        <span>Paid Media • Web Engineering • SEO • 24/7 Lead Automation</span>
+        <span>Vuvuzela Digital Marketing Factory Inc. — Growth Strategy • Platform Engineering • PR &amp; ORM</span>
+        <span>Paid Media • Web &amp; Mobile Engineering • 4K Video • Strategic GOTV Campaigns</span>
       </div>
     </footer>
   `;

@@ -9,13 +9,13 @@ export function renderProblemSolutionSection() {
         <!-- Section Header -->
         <div class="section-header-center">
           <div class="pill-badge">
-            <span>The Marketing Reality Check</span>
+            <span>The Digital Landscape Reality</span>
           </div>
           <h2 class="section-title">
-            Stop Burning Ad Spend on <span style="color: var(--accent-red);">Leaky Funnels</span>
+            The Internet is Here to Stay. <span style="color: var(--brand-accent, #6366f1);">Is Your Brand Positioned to Win?</span>
           </h2>
           <p class="section-subtitle">
-            Most agencies sell vanity clicks while businesses bleed cash on low ROAS, slow-loading pages, and uncontacted leads. Here is how Vuvuzela DMF engineers predictable, profitable customer acquisition.
+            Smartphones now account for over <strong>80% of retail web visits</strong>. Consumers catch up on WhatsApp, discover on Instagram, and engage on TikTok. Yet most brands bleed cash on disjointed agencies, low ROAS, slow-loading pages, and uncontacted leads. Here is how Vuvuzela Digital Marketing Factory Inc. bridges the gap with bespoke, data-driven strategy.
           </p>
         </div>
 

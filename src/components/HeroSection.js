@@ -17,7 +17,7 @@ export function renderHeroSection() {
 
         <!-- Subheading -->
         <p class="hero-lead">
-          Vuvuzela DMF is an elite digital marketing agency engineering predictable revenue pipelines for ambitious brands. We combine high-converting web design, precision paid acquisition (Meta & Google), technical SEO, and 24/7 smart lead automation—fully managed for you.
+          The Internet is here to stay, and smartphones now account for over 80% of retail visits. At <strong>Vuvuzela Digital Marketing Factory Inc.</strong>, we blend bespoke creativity with data-driven strategy across high-converting web engineering, precision PPC, lifecycle video content, mobile apps, and strategic campaigns to deliver measurable visibility and revenue far beyond expectations.
         </p>
 
         <!-- CTA Buttons -->

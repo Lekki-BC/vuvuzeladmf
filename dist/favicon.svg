@@ -1,21 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
   <defs>
-    <linearGradient id="vuvuGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4f46e5" />
-      <stop offset="50%" stop-color="#7c3aed" />
-      <stop offset="100%" stop-color="#06b6d4" />
+    <!-- Deep Royal Sapphire to Midnight Indigo gradient -->
+    <linearGradient id="vDeepBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="45%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#0f172a" />
     </linearGradient>
-    <linearGradient id="vuvuAccent" x1="0%" y1="100%" x2="100%" y2="0%">
+
+    <!-- Electric Cobalt Velocity highlight -->
+    <linearGradient id="vCobalt" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#3b82f6" />
-      <stop offset="100%" stop-color="#10b981" />
+      <stop offset="60%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+
+    <!-- Cyan Ambient Apex / Speed prism -->
+    <linearGradient id="vCyanGlow" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+
+    <!-- Dark Luxury Squircle Shield -->
+    <linearGradient id="vShield" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120" />
+      <stop offset="100%" stop-color="#020617" />
     </linearGradient>
   </defs>
-  <!-- Background Rounded Shield -->
-  <rect width="64" height="64" rx="16" fill="#0f172a" />
-  
-  <!-- Dynamic Geometric 'V' Growth Horn Motif -->
-  <path d="M16 16 L27 46 C28 48.5 31 49.5 33 47.5 L48 16" stroke="url(#vuvuGrad)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-  
-  <!-- Inner Dynamic Energy Spark -->
-  <polygon points="32,24 35,32 43,33 37,38 39,46 32,41 25,46 27,38 21,33 29,32" fill="url(#vuvuAccent)" opacity="0.95" />
+
+  <!-- Squircle Base Frame -->
+  <rect width="48" height="48" rx="13" fill="url(#vShield)" stroke="rgba(255, 255, 255, 0.16)" stroke-width="1.2" />
+
+  <!-- Subtle Inner Ambient Mesh Glow -->
+  <circle cx="24" cy="24" r="14" fill="#2563eb" opacity="0.25" filter="blur(8px)" />
+
+  <!-- 1. Left Facet (Deep Sapphire Pillar) -->
+  <path d="M10 12 L19 12 L24 38 L17.5 38 Z" fill="url(#vDeepBlue)" />
+
+  <!-- 2. Right Facet (Electric Cobalt Speed Wing) -->
+  <path d="M38 12 L29 12 L24 38 L30.5 38 Z" fill="url(#vCobalt)" />
+
+  <!-- 3. Inner Architectural Fold / Velocity Arrow -->
+  <path d="M19 12 L24 26 L29 12 L24 18 Z" fill="url(#vCyanGlow)" />
+
+  <!-- 4. Dynamic Apex Spark -->
+  <circle cx="24" cy="37" r="1.8" fill="#38bdf8" />
 </svg>

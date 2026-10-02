@@ -9,8 +9,38 @@ export function renderGlassmorphismNav() {
   return `
     <nav class="glass-nav-container navbar-visible" id="glassNav" aria-label="Main Navigation">
       <div class="glass-nav-bar">
-        <!-- Brand Logo (Pure Typography without added icon mark) -->
+        <!-- Brand Logo (Bespoke Geometric Deep-Blue 'V' Mark + Wordmark) -->
         <a href="/" class="nav-logo-link" data-route="/" aria-label="Vuvuzela DMF Home">
+          <div class="nav-logo-mark" aria-hidden="true">
+            <svg width="34" height="34" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="navVDeepBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#1e1b4b" />
+                  <stop offset="45%" stop-color="#1e3a8a" />
+                  <stop offset="100%" stop-color="#0f172a" />
+                </linearGradient>
+                <linearGradient id="navVCobalt" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#3b82f6" />
+                  <stop offset="60%" stop-color="#2563eb" />
+                  <stop offset="100%" stop-color="#1d4ed8" />
+                </linearGradient>
+                <linearGradient id="navVCyanGlow" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#06b6d4" />
+                  <stop offset="100%" stop-color="#38bdf8" />
+                </linearGradient>
+                <linearGradient id="navVShield" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#0b1120" />
+                  <stop offset="100%" stop-color="#020617" />
+                </linearGradient>
+              </defs>
+              <rect width="48" height="48" rx="13" fill="url(#navVShield)" stroke="rgba(255, 255, 255, 0.16)" stroke-width="1.2" />
+              <circle cx="24" cy="24" r="14" fill="#2563eb" opacity="0.25" />
+              <path d="M10 12 L19 12 L24 38 L17.5 38 Z" fill="url(#navVDeepBlue)" />
+              <path d="M38 12 L29 12 L24 38 L30.5 38 Z" fill="url(#navVCobalt)" />
+              <path d="M19 12 L24 26 L29 12 L24 18 Z" fill="url(#navVCyanGlow)" />
+              <circle cx="24" cy="37" r="1.8" fill="#38bdf8" />
+            </svg>
+          </div>
           <div class="nav-logo-text">
             <span>VUVUZELA</span><span class="nav-brand-accent">DMF</span>
           </div>

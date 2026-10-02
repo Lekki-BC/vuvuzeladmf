@@ -6,6 +6,7 @@
 const INDUSTRY_DATA = {
   ecommerce: {
     badge: 'E-Commerce & High-Growth DTC',
+    image: '/images/industry-ecommerce.jpg',
     title: 'Scale E-Commerce Revenue & Blended ROAS',
     desc: 'High-ROI Meta, TikTok, and Google Performance Max campaigns paired with conversion-rate-optimized product pages, abandoned cart WhatsApp recovery, and high-LTV email retention flows.',
     quote: '"Vuvuzela scaled our DTC brand from $35k to $140k/month in 90 days. Their ad creative testing and checkout CRO doubled our blended return on ad spend to 4.6x."',
@@ -28,6 +29,7 @@ const INDUSTRY_DATA = {
   },
   b2b: {
     badge: 'B2B & Professional Services',
+    image: '/images/industry-b2b.jpg',
     title: 'Predictable Pipeline for High-Ticket B2B & Consultancies',
     desc: 'Target corporate decision-makers with precision Google Search & LinkedIn funnels, authoritative case study landing pages, and automated qualification that delivers calendar-ready sales consultations.',
     quote: '"We used to rely on sporadic referrals. Vuvuzela built a predictable inbound engine that adds 15 to 20 qualified corporate strategy consultations to our calendar every month."',
@@ -50,6 +52,7 @@ const INDUSTRY_DATA = {
   },
   clinics: {
     badge: 'Private Clinics & Healthcare',
+    image: '/images/industry-clinics.jpg',
     title: 'High-Value Patient Inbound & Local Dominance',
     desc: 'Capture high-ticket private patient inquiries with local Google search dominance, credible medical landing pages, and 24/7 patient intake triage across web and WhatsApp.',
     quote: '"Patients booking high-ticket cosmetic dental treatments jumped 80%. Their local Google ad campaigns and rapid WhatsApp triage completely filled our treatment rooms."',
@@ -72,6 +75,7 @@ const INDUSTRY_DATA = {
   },
   realestate: {
     badge: 'Real Estate & Luxury Property',
+    image: '/images/industry-realestate.jpg',
     title: 'High-Ticket Investor & Buyer Acquisition',
     desc: 'Precision Meta and Google Search campaigns, bespoke single-development landing pages, and 24/7 WhatsApp investor triage that qualifies budgets and schedules private viewings.',
     quote: '"Vuvuzela generated over €4.2M in qualified buyer pipeline for our luxury residential developments within 60 days of ad launch."',
@@ -94,6 +98,7 @@ const INDUSTRY_DATA = {
   },
   gotv: {
     badge: 'Political, Civic & GOTV Campaigns',
+    image: '/images/service-campaigns-gotv.jpg',
     title: 'Strategic Voter Mobilization & Constituent Engagement',
     desc: 'Battle-tested online mobilization frameworks, optimized campaign portals, targeted media blitzes, and high-capacity WhatsApp API broadcasting engineered to persuade voters and mobilize communities.',
     quote: '"Vuvuzela\'s GOTV digital campaign infrastructure reached over 350,000 constituents with a 98% WhatsApp open rate, swinging turnout by +18.4% on election day."',
@@ -127,7 +132,6 @@ export function renderAITeamSection() {
         <!-- Section Header -->
         <div class="section-header-center">
           <div class="pill-badge">
-            
             <span>Specialized Growth Playbooks</span>
           </div>
           <h2 class="section-title" id="indSectionTitle">
@@ -140,10 +144,10 @@ export function renderAITeamSection() {
 
         <!-- Industry Selector Tabs -->
         <div class="industry-tabs-wrap">
-          <button type="button" class="ind-tab-btn active" data-industry="ecommerce">E-Commerce & DTC</button>
-          <button type="button" class="ind-tab-btn" data-industry="b2b">B2B & Professional</button>
-          <button type="button" class="ind-tab-btn" data-industry="clinics">Clinics & Health</button>
-          <button type="button" class="ind-tab-btn" data-industry="realestate">Real Estate & Property</button>
+          <button type="button" class="ind-tab-btn active" data-industry="ecommerce">E-Commerce &amp; DTC</button>
+          <button type="button" class="ind-tab-btn" data-industry="b2b">B2B &amp; Professional</button>
+          <button type="button" class="ind-tab-btn" data-industry="clinics">Clinics &amp; Health</button>
+          <button type="button" class="ind-tab-btn" data-industry="realestate">Real Estate &amp; Property</button>
           <button type="button" class="ind-tab-btn" data-industry="gotv">Civic &amp; GOTV Campaigns</button>
         </div>
 
@@ -155,7 +159,16 @@ export function renderAITeamSection() {
               ${data.badge}
             </div>
 
-            <h3 style="font-size: 2rem; font-weight: 800; color: var(--text-primary); line-height: 1.25;">
+            <!-- Contextual Industry Visual Banner -->
+            <div class="ind-preview-media">
+              <img id="indIndustryImg" src="${data.image}" alt="${data.badge}" class="ind-industry-img" loading="lazy" />
+              <div class="ind-preview-tag">
+                <span class="pulse-dot dot-green"></span>
+                <span id="indTagLabel">${data.badge} Pipeline</span>
+              </div>
+            </div>
+
+            <h3 style="font-size: 1.85rem; font-weight: 800; color: var(--text-primary); line-height: 1.25;">
               This is how your marketing turns traffic into paying clients.
             </h3>
 
@@ -245,6 +258,8 @@ export function initAITeamSection() {
   const quoteAuthor = document.getElementById('indQuoteAuthor');
   const chatAgentName = document.getElementById('chatAgentName');
   const chatAgentPhone = document.getElementById('chatAgentPhone');
+  const indIndustryImg = document.getElementById('indIndustryImg');
+  const indTagLabel = document.getElementById('indTagLabel');
   const chatMessagesScroll = document.getElementById('chatMessagesScroll');
   const chatPromptsBar = document.getElementById('chatPromptsBar');
   const chatDemoForm = document.getElementById('chatDemoForm');
@@ -264,6 +279,13 @@ export function initAITeamSection() {
     if (quoteAuthor) quoteAuthor.textContent = data.author;
     if (chatAgentName) chatAgentName.textContent = data.agentName;
     if (chatAgentPhone) chatAgentPhone.textContent = data.agentPhone;
+    if (indIndustryImg) {
+      indIndustryImg.src = data.image;
+      indIndustryImg.alt = data.badge;
+    }
+    if (indTagLabel) {
+      indTagLabel.textContent = `${data.badge} Pipeline`;
+    }
 
     // Reload messages
     chatMessagesScroll.innerHTML = data.initialMessages

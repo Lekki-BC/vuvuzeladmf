@@ -8,37 +8,43 @@ const TESTIMONIALS = [
     quote: 'Vuvuzela restructured our digital ad spend and connected our showroom WhatsApp. In month two, we generated 64 verified test drives at an acquisition cost 42% lower than our historical baseline.',
     author: 'Mike Rodriguez',
     role: 'Principal, Apex Automotive Group',
-    metric: '4.2x ROAS | 64 Test Drives'
+    metric: '4.2x ROAS | 64 Test Drives',
+    avatar: '/images/avatar-mike.jpg'
   },
   {
     quote: 'They completely re-engineered our Meta & TikTok ad creative and rebuilt our checkout funnels. Our monthly revenue surged from $45k to over $180k within 90 days.',
     author: 'Sarah Chen',
     role: 'Founder & CEO, Lumina DTC Apparel',
-    metric: '+300% Revenue Lift'
+    metric: '+300% Revenue Lift',
+    avatar: '/images/avatar-sarah.jpg'
   },
   {
     quote: 'With Vuvuzela DMF, our conversion rates jumped by 85% and inbound LinkedIn/Google Search ad inquiries became our #1 corporate deal generator. The ROI was undeniable within 30 days.',
     author: 'Michael Torres',
     role: 'Managing Director, Vantage B2B Advisory',
-    metric: '+85% Conversion Rate'
+    metric: '+85% Conversion Rate',
+    avatar: '/images/avatar-michael.jpg'
   },
   {
     quote: 'Their technical SEO and local Google ad strategy ranked our clinics #1 in our region. We went from struggling for private implant patients to a 3-week waiting list.',
     author: 'Dr. Jennifer Walsh',
     role: 'Clinical Director, City Dental Group',
-    metric: '+140% Private Patients'
+    metric: '+140% Private Patients',
+    avatar: '/images/avatar-jennifer.jpg'
   },
   {
     quote: 'What sets Vuvuzela apart is their speed-to-lead automation. Every dollar we put into paid ads is captured in seconds on WhatsApp before the lead can cross-shop.',
     author: 'David Kim',
     role: 'VP of Growth, Horizon Retail',
-    metric: '4.8x Blended ROAS'
+    metric: '4.8x Blended ROAS',
+    avatar: '/images/avatar-david.jpg'
   },
   {
     quote: 'They engineered a high-intent Meta ad funnel and custom property landing page that generated two closed luxury home listings totaling €2.4M in our first quarter.',
     author: 'James Wilson',
     role: 'Principal Broker, Wilson & Co Real Estate',
-    metric: '€2.4M Closed Pipeline'
+    metric: '€2.4M Closed Pipeline',
+    avatar: '/images/avatar-james.jpg'
   }
 ];
 
@@ -57,9 +63,7 @@ export function renderTestimonialsSection() {
       </div>
       <p class="test-body">"${t.quote}"</p>
       <div class="test-author-row">
-        <div class="test-avatar-placeholder">
-          ${t.author.charAt(0)}
-        </div>
+        <img src="${t.avatar}" alt="${t.author}" class="test-avatar-img" loading="lazy" />
         <div>
           <div class="test-name">${t.author}</div>
           <div class="test-role">${t.role}</div>

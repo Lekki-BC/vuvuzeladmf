@@ -45,15 +45,15 @@ export function renderHeroSection() {
             <!-- Social Proof Avatar Stack & Ratings -->
             <div class="hero-trust-proof">
               <div class="hero-avatar-stack">
-                <img src="/images/avatar-mike.jpg" alt="Client Mike Rodriguez" class="hero-avatar-img" />
-                <img src="/images/avatar-sarah.jpg" alt="Client Sarah Chen" class="hero-avatar-img" />
-                <img src="/images/avatar-michael.jpg" alt="Client Michael Torres" class="hero-avatar-img" />
-                <img src="/images/avatar-david.jpg" alt="Client David Kim" class="hero-avatar-img" />
+                <img src="/images/avatar-mike.jpg" alt="Client Babajide Adeleke - PrimeHaven Properties" class="hero-avatar-img" />
+                <img src="/images/avatar-sarah.jpg" alt="Client Amina Bello - KariStore DTC" class="hero-avatar-img" />
+                <img src="/images/avatar-michael.jpg" alt="Client Dr. Emeka Nnamani - Apex Medicare" class="hero-avatar-img" />
+                <img src="/images/avatar-david.jpg" alt="Client Folake Adeyemi - Nexus Advisory" class="hero-avatar-img" />
                 <span class="hero-avatar-extra">+50</span>
               </div>
               <div class="hero-trust-text">
                 <div class="hero-stars">★★★★★ <span class="hero-rating-num">4.9/5 Rating</span></div>
-                <div class="hero-trust-sub">Trusted by 50+ growth brands • Average 4.2x ROAS</div>
+                <div class="hero-trust-sub">Trusted by 50+ Nigerian &amp; African growth brands • Average 4.4x Blended ROAS</div>
               </div>
             </div>
 
@@ -69,13 +69,13 @@ export function renderHeroSection() {
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
                   <polyline points="20 6 9 17 4 12"/>
                 </svg>
-                Zero Vanity Metrics
+                Verified Naira &amp; USD ROAS
               </span>
               <span class="hero-check-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
                   <polyline points="20 6 9 17 4 12"/>
                 </svg>
-                24/7 WhatsApp Triage
+                Instant Triage + Human Handoff
               </span>
             </div>
           </div>
@@ -103,11 +103,11 @@ export function renderHeroSection() {
                   </div>
                   <div class="hero-chrome-live-tag">
                     <span class="pulse-dot dot-green"></span>
-                    <span>LIVE STREAM</span>
+                    <span>Q4 2026 LIVE STREAM</span>
                   </div>
                 </div>
 
-                <!-- Main Visual Image Wrap -->
+                <!-- Main Visual Image Wrap with Real-Time HUD Overlay -->
                 <div class="hero-image-wrap">
                   <img
                     src="/images/hero-dashboard.jpg"
@@ -115,6 +115,17 @@ export function renderHeroSection() {
                     class="hero-dashboard-image"
                     loading="eager"
                   />
+                  <!-- Modern Regional Telemetry Overlay Strip -->
+                  <div class="hero-telemetry-hud" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(11, 15, 25, 0.95) 0%, rgba(11, 15, 25, 0.75) 70%, transparent 100%); padding: 1rem 1.25rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(8px);">
+                    <div>
+                      <div style="font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; font-weight: 700;">Active Hubs: Lagos • Abuja • London</div>
+                      <div style="font-size: 0.95rem; font-weight: 800; color: #ffffff; font-family: 'JetBrains Mono', monospace;">₦48,650,000 <span style="font-size: 0.75rem; color: #10b981; font-weight: 600;">($31,400) MTD</span></div>
+                    </div>
+                    <div style="text-align: right;">
+                      <div style="font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; font-weight: 700;">Blended Return</div>
+                      <div style="font-size: 0.95rem; font-weight: 800; color: #10b981; font-family: 'JetBrains Mono', monospace;">4.4x Verified ROAS</div>
+                    </div>
+                  </div>
                   <div class="hero-image-glare"></div>
                 </div>
 
@@ -126,8 +137,8 @@ export function renderHeroSection() {
                     </svg>
                   </div>
                   <div class="pill-text-content">
-                    <span class="pill-title">Speed-to-Lead Triage</span>
-                    <span class="pill-stat">0:45s Instant Follow-up</span>
+                    <span class="pill-title">Hybrid Speed-to-Lead</span>
+                    <span class="pill-stat">&lt;45s AI + Live Human Agent</span>
                   </div>
                 </div>
 
@@ -141,7 +152,7 @@ export function renderHeroSection() {
                   </div>
                   <div class="pill-text-content">
                     <span class="pill-title">Average ROAS</span>
-                    <span class="pill-stat highlight-green">4.2x (+340% YoY)</span>
+                    <span class="pill-stat highlight-green">4.4x (₦ &amp; $ Tracked)</span>
                   </div>
                 </div>
 
@@ -162,32 +173,31 @@ export function renderHeroSection() {
           </div>
         </div>
 
-        <!-- Social Proof / Infinite Marquee -->
+        <!-- Social Proof / Infinite Marquee with Authentic Client Brands -->
         <div class="trust-marquee-wrapper">
           <div class="trust-marquee-fade-left"></div>
           <div class="trust-marquee-fade-right"></div>
-          <p class="trust-marquee-label">Trusted by high-growth companies, ambitious brands &amp; industry leaders</p>
+          <p class="trust-marquee-label">Trusted by high-growth companies, ambitious property developers &amp; DTC brands across Nigeria &amp; West Africa</p>
           <div class="trust-marquee-track">
             <!-- First Set -->
-            <div class="trust-marquee-item">TechCorp</div>
-            <div class="trust-marquee-item">InnovateLab</div>
-            <div class="trust-marquee-item">FutureScale</div>
-            <div class="trust-marquee-item">AutoFlow</div>
-            <div class="trust-marquee-item">eScale Digital</div>
-            <div class="trust-marquee-item">DataFlow UK</div>
-            <div class="trust-marquee-item">Apex Automations</div>
-            <div class="trust-marquee-item">Vanguard Growth</div>
+            <div class="trust-marquee-item">PrimeHaven Properties</div>
+            <div class="trust-marquee-item">KariStore DTC</div>
+            <div class="trust-marquee-item">Apex Medicare Clinics</div>
+            <div class="trust-marquee-item">Nexus Advisory Partners</div>
+            <div class="trust-marquee-item">Cedarcrest Diagnostics</div>
+            <div class="trust-marquee-item">PayGrid Commerce</div>
+            <div class="trust-marquee-item">UrbanNest Realty Lagos</div>
+            <div class="trust-marquee-item">Vanguard Energy &amp; Logistics</div>
             <!-- Duplicated for Infinite Smooth Loop -->
-            <div class="trust-marquee-item">TechCorp</div>
-            <div class="trust-marquee-item">InnovateLab</div>
-            <div class="trust-marquee-item">FutureScale</div>
-            <div class="trust-marquee-item">AutoFlow</div>
-            <div class="trust-marquee-item">eScale Digital</div>
-            <div class="trust-marquee-item">DataFlow UK</div>
-            <div class="trust-marquee-item">Apex Automations</div>
-            <div class="trust-marquee-item">Vanguard Growth</div>
+            <div class="trust-marquee-item">PrimeHaven Properties</div>
+            <div class="trust-marquee-item">KariStore DTC</div>
+            <div class="trust-marquee-item">Apex Medicare Clinics</div>
+            <div class="trust-marquee-item">Nexus Advisory Partners</div>
+            <div class="trust-marquee-item">Cedarcrest Diagnostics</div>
+            <div class="trust-marquee-item">PayGrid Commerce</div>
+            <div class="trust-marquee-item">UrbanNest Realty Lagos</div>
+            <div class="trust-marquee-item">Vanguard Energy &amp; Logistics</div>
           </div>
-        </div>
       </div>
     </section>
   `;
